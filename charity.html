@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UECHT GROUP — 寰宇極創株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Sans+SC:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+/* Charity page hero */
+.charity-page-hero {
+  min-height: 60vh; display:flex; flex-direction:column; justify-content:center;
+  padding: 8rem 5vw 5rem; position: relative; overflow: hidden;
+  background: linear-gradient(160deg, #071820 0%, #0d2530 60%, #0a1e2a 100%);
+}
+.charity-page-hero::before {
+  content: ''; position:absolute; inset:0;
+  background-image: linear-gradient(var(--rule) 1px, transparent 1px), linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at 30% 60%, black 20%, transparent 70%);
+}
+.charity-page-hero::after {
+  content:''; position:absolute; right:0; top:0; bottom:0; width:40%;
+  background: radial-gradient(ellipse at right center, rgba(0,151,184,0.12) 0%, transparent 70%);
+}
+.charity-breadcrumb { font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.2em; color:var(--muted); margin-bottom:1.5rem; opacity:0; animation: fadeUp 0.6s 0.2s forwards; }
+.charity-breadcrumb a { color:var(--accent2); text-decoration:none; }
+@media (max-width: 768px) {
+  #charity-teaser > div { grid-template-columns: 1fr !important; }
+  .charity-page-hero { min-height: 50vh; }
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-mark"><span>UC</span></div>
+    <div class="logo-text">
+      <span class="logo-main">UECHT GROUP</span>
+      <span class="logo-sub" data-ja="寰宇極創株式会社" data-cn="寰宇極創(UEC)" data-en="Universe Extreme Creators High Tech">寰宇極創株式会社</span>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html" class="nav-link" data-ja="トップ" data-cn="首页" data-en="Home">トップ</a>
+    <a href="index.html#services" class="nav-link" data-ja="事業領域" data-cn="业务领域" data-en="Services">事業領域</a>
+    <a href="index.html#news" class="nav-link" data-ja="ニュース" data-cn="新闻" data-en="News">ニュース</a>
+    <a href="charity.html" class="nav-link" style="color:var(--accent2);" data-ja="慈善・援助" data-cn="慈善援助" data-en="Charity">慈善・援助</a>
+    <a href="index.html#contact" class="nav-link" data-ja="お問い合わせ" data-cn="联系我们" data-en="Contact">お問い合わせ</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('ja')">JP</button>
+      <button class="lang-btn" onclick="setLang('cn')">CN</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+</header>
+
+<!-- CHARITY HERO -->
+<section class="charity-page-hero">
+  <div class="hero-content" style="max-width:820px;">
+    <p class="charity-breadcrumb"><a href="index.html">HOME</a> / <span data-ja="慈善・援助事業" data-cn="慈善援助事业" data-en="CHARITY & AID">慈善・援助事業</span></p>
+    <p class="hero-tag" data-ja="社会に還元する、極限の使命" data-cn="回馈社会，极限使命" data-en="Giving back to society — our ultimate mission">社会に還元する、極限の使命</p>
+    <h1 class="hero-headline" style="font-size:clamp(2rem,5vw,4rem);">
+      <span class="italic accent" data-ja="慈善・援助" data-cn="慈善援助" data-en="Charity &amp;">慈善・援助</span><br>
+      <span data-ja="事業" data-cn="事业" data-en="Aid Programs">事業</span>
+    </h1>
+    <p class="hero-sub" style="max-width:580px;"
+       data-ja="UECHTグループは、事業活動で得た成果を社会に還元します。教育・医療・環境保護・人道支援の4分野にわたり、世界各地でインパクトある支援活動を展開しています。"
+       data-cn="UECHT集团将业务成果回馈社会。在教育、医疗、环境保护、人道援助四大领域，开展有影响力的支援活动。"
+       data-en="UECHT Group returns the fruits of its business activities to society, running impactful programs across education, healthcare, environmental protection, and humanitarian support worldwide.">
+      UECHTグループは、事業活動で得た成果を社会に還元します。教育・医療・環境保護・人道支援の4分野にわたり、世界各地でインパクトある支援活動を展開しています。
+    </p>
+    <div class="hero-actions" style="margin-top:2.5rem;">
+      <a href="#donate" class="btn-primary" data-ja="今すぐ寄付" data-cn="立即捐款" data-en="Donate Now">今すぐ寄付</a>
+      <a href="#membership" class="btn-outline" data-ja="支援プランを見る" data-cn="了解支援计划" data-en="View Plans">支援プランを見る</a>
+    </div>
+  </div>
+  <div class="hero-stats" style="margin-top:4rem;">
+    <div class="stat-block"><div class="stat-number">2,500+</div><div class="stat-label" data-ja="支援受益者数" data-cn="受益人数" data-en="Beneficiaries">支援受益者数</div></div>
+    <div class="stat-block"><div class="stat-number">18</div><div class="stat-label" data-ja="対象国・地域" data-cn="受援国家" data-en="Countries">対象国・地域</div></div>
+    <div class="stat-block"><div class="stat-number">72%</div><div class="stat-label" data-ja="直接支援率" data-cn="直接援助率" data-en="Direct Aid Ratio">直接支援率</div></div>
+    <div class="stat-block"><div class="stat-number">¥120M+</div><div class="stat-label" data-ja="年間支援総額" data-cn="年度援助总额" data-en="Annual Aid Total">年間支援総額</div></div>
+  </div>
+</section>
+
+<section id="charity">
+  <div class="charity-hero reveal">
+    <p class="sec-eyebrow" style="justify-content:center;"
+       data-ja="慈善・世界援助事業" data-cn="慈善与全球援助事业" data-en="Global Charity & Aid">慈善・世界援助事業</p>
+    <h2 class="sec-title"
+        data-ja="世界の困難に<br><span class='italic'>共に立ち向かう</span>"
+        data-cn="共同面对<br><span class='italic'>世界的挑战</span>"
+        data-en="Standing Together Against<br><span class='italic'>Global Challenges</span>">
+      世界の困難に<br><span class="italic">共に立ち向かう</span>
+    </h2>
+    <p data-ja="UECHTグループは企業の社会的責任として、教育・医療・貧困・災害の4つの分野で世界規模の支援活動を展開しています。皆様のご支援で、より多くの命を救うことができます。"
+       data-cn="UECHT集团作为企业社会责任，在教育、医疗、贫困和灾害四大领域开展全球援助活动。您的支持将帮助拯救更多生命。"
+       data-en="As part of our corporate social responsibility, UECHT Group conducts global aid activities across four areas: education, healthcare, poverty, and disaster relief. Your support helps save more lives.">
+      UECHTグループは企業の社会的責任として、教育・医療・貧困・災害の4つの分野で世界規模の支援活動を展開しています。皆様のご支援で、より多くの命を救うことができます。
+    </p>
+  </div>
+
+  <div class="charity-grid">
+    <div class="charity-card reveal">
+      <div class="charity-icon">📚</div>
+      <h3 class="charity-card-title" data-ja="教育・児童援助" data-cn="教育与儿童援助" data-en="Education & Child Aid">教育・児童援助</h3>
+      <p class="charity-card-desc" data-ja="途上国の学校建設、奨学金支給、デジタル教育環境の整備を通じて次世代を支援します。" data-cn="通过在发展中国家建设学校、提供奖学金、建立数字教育环境来支持下一代。" data-en="Supporting the next generation through school construction, scholarships, and digital education in developing countries.">途上国の学校建設、奨学金支給、デジタル教育環境の整備を通じて次世代を支援します。</p>
+    </div>
+    <div class="charity-card reveal">
+      <div class="charity-icon">🏥</div>
+      <h3 class="charity-card-title" data-ja="医療・健康支援" data-cn="医疗与健康支援" data-en="Medical & Health Support">医療・健康支援</h3>
+      <p class="charity-card-desc" data-ja="医療アクセスが困難な地域への医薬品提供、医療施設の建設、医療従事者の育成に取り組みます。" data-cn="为医疗资源匮乏地区提供药品、建设医疗设施、培育医疗工作者。" data-en="Providing medicines, building medical facilities, and training healthcare workers in underserved regions.">医療アクセスが困難な地域への医薬品提供、医療施設の建設、医療従事者の育成に取り組みます。</p>
+    </div>
+    <div class="charity-card reveal">
+      <div class="charity-icon">🌾</div>
+      <h3 class="charity-card-title" data-ja="貧困地域援助" data-cn="贫困地区援助" data-en="Poverty Area Aid">貧困地域援助</h3>
+      <p class="charity-card-desc" data-ja="食料・飲料水の提供、農業技術支援、経済的自立のためのマイクロファイナンス事業を推進します。" data-cn="提供食物和饮用水，农业技术支持，推进促进经济独立的小额贷款事业。" data-en="Providing food and water, agricultural technology support, and microfinance programs for economic independence.">食料・飲料水の提供、農業技術支援、経済的自立のためのマイクロファイナンス事業を推進します。</p>
+    </div>
+    <div class="charity-card reveal">
+      <div class="charity-icon">🆘</div>
+      <h3 class="charity-card-title" data-ja="災害緊急救援" data-cn="灾害紧急救援" data-en="Disaster Relief">災害緊急救援</h3>
+      <p class="charity-card-desc" data-ja="自然災害発生時に48時間以内の緊急支援体制を構築。物資・資金・人材を迅速に現地へ届けます。" data-cn="自然灾害发生时，建立48小时内紧急支援体系，迅速向当地提供物资、资金和人力资源。" data-en="Emergency response within 48 hours of natural disasters, rapidly delivering supplies, funds, and personnel.">自然災害発生時に48時間以内の緊急支援体制を構築。物資・資金・人材を迅速に現地へ届けます。</p>
+    </div>
+  </div>
+
+  <div class="charity-stats reveal">
+    <div class="charity-stat">
+      <div class="charity-stat-num">32</div>
+      <div class="charity-stat-label" data-ja="支援国・地域" data-cn="受援国家/地区" data-en="Countries Supported">支援国・地域</div>
+    </div>
+    <div class="charity-stat">
+      <div class="charity-stat-num">12,400+</div>
+      <div class="charity-stat-label" data-ja="受益者数（年間）" data-cn="受益人数（年）" data-en="Beneficiaries (Annual)">受益者数（年間）</div>
+    </div>
+    <div class="charity-stat">
+      <div class="charity-stat-num">98%</div>
+      <div class="charity-stat-label" data-ja="寄付金の直接活用率" data-cn="捐款直接利用率" data-en="Direct Fund Utilization">寄付金の直接活用率</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- DONATE / 寄付・捐款                                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="donate">
+  <div class="donate-layout">
+    <div class="donate-left">
+      <p class="sec-eyebrow reveal" data-ja="寄付・捐款" data-cn="捐款方式" data-en="Donate">寄付・捐款</p>
+      <h2 class="sec-title reveal"
+          data-ja="銀行口座情報・<br><span class='italic'>送金方法</span>"
+          data-cn="银行账户信息·<br><span class='italic'>汇款方式</span>"
+          data-en="Bank Accounts &<br><span class='italic'>Transfer Methods</span>">
+        銀行口座情報・<br><span class="italic">送金方法</span>
+      </h2>
+      <p class="reveal"
+         data-ja="以下の口座へ直接振込いただくか、オンライン決済サービスをご利用ください。すべての寄付は領収書を発行いたします。"
+         data-cn="请直接汇款至以下账户，或使用在线支付服务。所有捐款均开具收据。"
+         data-en="You may transfer directly to the accounts below or use online payment services. Receipts are issued for all donations.">
+        以下の口座へ直接振込いただくか、オンライン決済サービスをご利用ください。すべての寄付は領収書を発行いたします。
+      </p>
+
+      <div class="account-cards reveal">
+        <div class="account-card">
+          <div class="account-card-head">
+            <span class="account-bank">🇯🇵 &nbsp;三菱UFJ銀行 / MUFG Bank</span>
+            <button class="account-copy" onclick="copyText('8901-2345678', this)"
+                    data-ja="コピー" data-cn="复制" data-en="Copy">コピー</button>
+          </div>
+          <div class="account-num">支店: 丸の内支店 &nbsp;｜&nbsp; 口座番号: 8901-2345678</div>
+          <div class="account-name" data-ja="口座名義: 寰宇極創株式会社 慈善事業部" data-cn="账户名称: 寰宇极创株式会社 慈善事业部" data-en="Account Name: UECHT Group Charity Division">口座名義: 寰宇極創株式会社 慈善事業部</div>
+        </div>
+        <div class="account-card">
+          <div class="account-card-head">
+            <span class="account-bank">🌏 &nbsp;SWIFT / International Wire</span>
+            <button class="account-copy" onclick="copyText('BOTKJPJTXXX', this)"
+                    data-ja="コピー" data-cn="复制" data-en="Copy">コピー</button>
+          </div>
+          <div class="account-num">SWIFT: BOTKJPJTXXX &nbsp;｜&nbsp; IBAN: JP29-UECH-0012-3456-7890</div>
+          <div class="account-name" data-ja="受取人: UECHT GROUP CHARITY FUND" data-cn="收款人: UECHT GROUP CHARITY FUND" data-en="Beneficiary: UECHT GROUP CHARITY FUND">受取人: UECHT GROUP CHARITY FUND</div>
+        </div>
+        <div class="account-card">
+          <div class="account-card-head">
+            <span class="account-bank">🇨🇳 &nbsp;中国銀行 / Bank of China</span>
+            <button class="account-copy" onclick="copyText('6217-0012-3456-7890', this)"
+                    data-ja="コピー" data-cn="复制" data-en="Copy">コピー</button>
+          </div>
+          <div class="account-num">账号: 6217-0012-3456-7890 &nbsp;｜&nbsp; 开户行: 中国银行北京分行</div>
+          <div class="account-name" data-ja="户名: 宇宙极创集团慈善基金" data-cn="户名: 宇宙极创集团慈善基金" data-en="Account Name: UECHT Group Charity Fund (China)">户名: 宇宙极创集团慈善基金</div>
+        </div>
+      </div>
+
+      <div class="donate-note reveal"
+           data-ja="⚠ 本口座情報は仮の例示です。実際の運用には金融機関の審査・登録が必要です。PayPal / 支付宝 / WeChat Pay の収受には各社との加盟店契約が必要となります。"
+           data-cn="⚠ 以上账户信息为示例。实际运营需经金融机构审查与注册。接受 PayPal / 支付宝 / 微信支付需与各平台签订商户协议。"
+           data-en="⚠ The account information above is for demonstration purposes. Actual operations require financial institution verification. Accepting PayPal / Alipay / WeChat Pay requires merchant agreements with each provider.">
+        ⚠ 本口座情報は仮の例示です。実際の運用には金融機関の審査・登録が必要です。PayPal / 支付宝 / WeChat Pay の収受には各社との加盟店契約が必要となります。
+      </div>
+    </div>
+
+    <div class="donate-right reveal">
+      <p class="sec-eyebrow" data-ja="オンライン寄付" data-cn="在线捐款" data-en="Online Donation">オンライン寄付</p>
+      <h3 style="font-size:1.6rem; font-weight:200; margin-bottom:2rem;"
+          data-ja="金額・支払方法を<br>お選びください" data-cn="请选择金额<br>与支付方式" data-en="Select Amount<br>& Payment Method">
+        金額・支払方法を<br>お選びください
+      </h3>
+
+      <div class="donate-tabs">
+        <button class="donate-tab active" onclick="switchDonateTab('once', this)"
+                data-ja="一回寄付" data-cn="单次捐款" data-en="One-time">一回寄付</button>
+        <button class="donate-tab" onclick="switchDonateTab('monthly', this)"
+                data-ja="月次定期" data-cn="每月定期" data-en="Monthly">月次定期</button>
+        <button class="donate-tab" onclick="switchDonateTab('sponsor', this)"
+                data-ja="企業スポンサー" data-cn="企业赞助" data-en="Corporate">企業スポンサー</button>
+      </div>
+
+      <div id="donate-once" class="donate-panel active">
+        <p style="font-size:0.82rem; color:var(--muted); margin-bottom:1rem;"
+           data-ja="寄付金額を選択" data-cn="选择捐款金额" data-en="Select donation amount">寄付金額を選択</p>
+        <div class="amount-grid">
+          <button class="amount-btn" onclick="selectAmount(this)">¥ 1,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)">¥ 5,000</button>
+          <button class="amount-btn selected" onclick="selectAmount(this)">¥ 10,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)">¥ 30,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)">¥ 50,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)"
+                  data-ja="任意の金額" data-cn="自定义金额" data-en="Custom">任意の金額</button>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label class="form-label" data-ja="支援用途を指定（任意）" data-cn="指定用途（可选）" data-en="Specify Use (Optional)">支援用途を指定（任意）</label>
+          <select class="form-select">
+            <option data-ja="指定なし（最も必要な分野へ）" data-cn="不指定（用于最需要的领域）" data-en="No preference (where most needed)">指定なし（最も必要な分野へ）</option>
+            <option data-ja="教育・児童援助" data-cn="教育与儿童援助" data-en="Education & Child Aid">教育・児童援助</option>
+            <option data-ja="医療・健康支援" data-cn="医疗与健康支援" data-en="Medical & Health">医療・健康支援</option>
+            <option data-ja="貧困地域援助" data-cn="贫困地区援助" data-en="Poverty Aid">貧困地域援助</option>
+            <option data-ja="災害緊急救援" data-cn="灾害紧急救援" data-en="Disaster Relief">災害緊急救援</option>
+          </select>
+        </div>
+        <p style="font-size:0.82rem; color:var(--muted); margin-bottom:0.8rem;"
+           data-ja="支払方法" data-cn="支付方式" data-en="Payment Method">支払方法</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+          <div class="form-group">
+            <label class="form-label" data-ja="お名前" data-cn="姓名" data-en="Name">お名前</label>
+            <input type="text" class="form-input" id="donor-name" data-ja="山田 太郎" data-cn="张三" data-en="John Doe" placeholder="山田 太郎">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-ja="メール *" data-cn="邮箱 *" data-en="Email *">メール *</label>
+            <input type="email" class="form-input" id="donor-email" placeholder="example@email.com" required>
+          </div>
+        </div>
+        <div class="payment-methods">
+          <button class="pay-method selected" onclick="selectPayMethod(this)" data-method="bank"><span class="pay-method-icon">🏦</span> 銀行振込</button>
+          <button class="pay-method" onclick="selectPayMethod(this)" data-method="paypal"><span class="pay-method-icon">💙</span> PayPal</button>
+          <button class="pay-method" onclick="selectPayMethod(this)" data-method="alipay"><span class="pay-method-icon">🔵</span> 支付宝</button>
+          <button class="pay-method" onclick="selectPayMethod(this)" data-method="wechat"><span class="pay-method-icon">💚</span> WeChat Pay</button>
+        </div>
+        <button class="btn-primary" style="width:100%; justify-content:center;" onclick="submitDonation()"
+                data-ja="寄付する" data-cn="立即捐款" data-en="Donate Now">寄付する</button>
+        <p style="font-size:0.72rem; color:var(--muted); margin-top:0.8rem; text-align:center;"
+           data-ja="※ オンライン決済機能は開発中です。現在は銀行振込のみ対応しています。"
+           data-cn="※ 在线支付功能正在开发中，目前仅支持银行转账。"
+           data-en="※ Online payment processing is under development. Currently bank transfer only.">
+          ※ オンライン決済機能は開発中です。現在は銀行振込のみ対応しています。
+        </p>
+      </div>
+
+      <div id="donate-monthly" class="donate-panel">
+        <p style="font-size:0.95rem; color:var(--silver); line-height:1.8; margin-bottom:1.5rem;"
+           data-ja="毎月一定額を継続してご支援いただくことで、長期的・安定的な援助活動が可能になります。月額¥3,000から始められます。"
+           data-cn="通过每月定额持续支持，使长期稳定的援助活动成为可能。月捐从3,000日元起。"
+           data-en="Monthly recurring donations enable long-term, stable aid activities. Start from ¥3,000/month.">
+          毎月一定額を継続してご支援いただくことで、長期的・安定的な援助活動が可能になります。月額¥3,000から始められます。
+        </p>
+        <div class="amount-grid">
+          <button class="amount-btn" onclick="selectAmount(this)">¥ 3,000<br><span style="font-size:0.55rem; color:var(--muted);">/ 月</span></button>
+          <button class="amount-btn selected" onclick="selectAmount(this)">¥ 5,000<br><span style="font-size:0.55rem; color:var(--muted);">/ 月</span></button>
+          <button class="amount-btn" onclick="selectAmount(this)">¥ 10,000<br><span style="font-size:0.55rem; color:var(--muted);">/ 月</span></button>
+        </div>
+        <button class="btn-primary" style="width:100%; justify-content:center; margin-top:1rem;" onclick="submitMonthlyDonation()"
+                data-ja="月次サポーターに登録" data-cn="注册为月度支持者" data-en="Register as Monthly Supporter">月次サポーターに登録</button>
+        <p style="font-size:0.72rem; color:var(--muted); margin-top:0.8rem; text-align:center;"
+           data-ja="※ 定期決済機能（Stripe等）の導入が必要です。バックエンド構築後に有効化されます。"
+           data-cn="※ 需要接入定期扣款功能（如Stripe），后端构建完成后将正式启用。"
+           data-en="※ Recurring payment integration (Stripe etc.) required. Will be enabled after backend development.">
+          ※ 定期決済機能（Stripe等）の導入が必要です。バックエンド構築後に有効化されます。
+        </p>
+      </div>
+
+      <div id="donate-sponsor" class="donate-panel">
+        <p style="font-size:0.95rem; color:var(--silver); line-height:1.8; margin-bottom:1.5rem;"
+           data-ja="企業スポンサーとして参加することで、CSR活動の強化と共にブランドの社会的価値を高めることができます。ロゴ掲載・共同プロジェクト等のメリットがあります。"
+           data-cn="作为企业赞助商参与，可在加强CSR活动的同时提升品牌社会价值。享有标志展示、联合项目等多重权益。"
+           data-en="Join as a corporate sponsor to enhance your CSR activities while elevating your brand's social value. Benefits include logo placement and joint projects.">
+          企業スポンサーとして参加することで、CSR活動の強化と共にブランドの社会的価値を高めることができます。
+        </p>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label" data-ja="会社名 *" data-cn="公司名称 *" data-en="Company *">会社名 *</label>
+          <input type="text" class="form-input" placeholder="株式会社〇〇">
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label" data-ja="担当者メール *" data-cn="负责人邮箱 *" data-en="Contact Email *">担当者メール *</label>
+          <input type="email" class="form-input" placeholder="contact@company.com">
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label class="form-label" data-ja="スポンサーシップ規模" data-cn="赞助规模" data-en="Sponsorship Level">スポンサーシップ規模</label>
+          <select class="form-select">
+            <option data-ja="シルバー（年間 ¥500,000〜）" data-cn="银牌（年 ¥500,000起）" data-en="Silver (¥500,000+/yr)">シルバー（年間 ¥500,000〜）</option>
+            <option data-ja="ゴールド（年間 ¥2,000,000〜）" data-cn="金牌（年 ¥2,000,000起）" data-en="Gold (¥2,000,000+/yr)">ゴールド（年間 ¥2,000,000〜）</option>
+            <option data-ja="プラチナ（年間 ¥10,000,000〜）" data-cn="铂金（年 ¥10,000,000起）" data-en="Platinum (¥10,000,000+/yr)">プラチナ（年間 ¥10,000,000〜）</option>
+          </select>
+        </div>
+        <button class="btn-primary" style="width:100%; justify-content:center;" onclick="submitSponsorApplication()"
+                data-ja="スポンサーシップ申請" data-cn="申请企业赞助" data-en="Apply for Sponsorship">スポンサーシップ申請</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- MEMBERSHIP / B2C 支援プラン                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="membership">
+  <p class="sec-eyebrow reveal" data-ja="B2C 支援プラン" data-cn="B2C支援计划" data-en="B2C Support Plans">B2C 支援プラン</p>
+  <h2 class="sec-title reveal"
+      data-ja="参加して<span class='italic'>世界を変える</span>"
+      data-cn="参与其中，<span class='italic'>改变世界</span>"
+      data-en="Join &amp; <span class='italic'>Change the World</span>">
+    参加して<span class="italic">世界を変える</span>
+  </h2>
+  <p class="reveal" style="max-width:600px; color:var(--silver); line-height:1.9;"
+     data-ja="個人・法人を問わず、様々な形でUECHTの慈善活動に参加できます。有料会員制から企業スポンサーシップ、オンラインボランティアまで幅広い選択肢をご用意しています。"
+     data-cn="无论个人还是企业，均可通过多种方式参与UECHT慈善活动。从付费会员制到企业赞助、在线志愿者，提供丰富多样的参与选项。"
+     data-en="Whether individual or corporate, you can participate in UECHT's charitable activities in various ways — from paid memberships to corporate sponsorships and online volunteering.">
+    個人・法人を問わず、様々な形でUECHTの慈善活動に参加できます。
+  </p>
+
+  <div class="membership-grid reveal">
+    <div class="membership-card">
+      <span class="membership-badge" data-ja="サポーター" data-cn="支持者" data-en="Supporter">サポーター</span>
+      <div class="membership-price">
+        <div class="membership-price-num">¥ 1,000</div>
+        <div class="membership-price-unit" data-ja="/ 月  ·  年払い ¥10,000" data-cn="/ 月  ·  年付 ¥10,000" data-en="/ month  ·  ¥10,000/year">/ 月  ·  年払い ¥10,000</div>
+      </div>
+      <h3 class="membership-title" data-ja="ベーシック会員" data-cn="基础会员" data-en="Basic Member">ベーシック会員</h3>
+      <p class="membership-sub" data-ja="小さな一歩で大きな変化を。" data-cn="从小小的一步开始，创造巨大变化。" data-en="Small steps, big impact.">小さな一歩で大きな変化を。</p>
+      <ul class="membership-features">
+        <li data-ja="月次活動レポート受信" data-cn="每月活动报告接收" data-en="Monthly activity report">月次活動レポート受信</li>
+        <li data-ja="寄付控除証明書の発行" data-cn="捐款扣税证明书" data-en="Tax deduction certificate">寄付控除証明書の発行</li>
+        <li data-ja="オンラインコミュニティ参加" data-cn="在线社区参与" data-en="Online community access">オンラインコミュニティ参加</li>
+        <li data-ja="活動現場写真・動画の共有" data-cn="活动现场照片/视频分享" data-en="Field photos & video updates">活動現場写真・動画の共有</li>
+      </ul>
+      <button class="btn-membership btn-membership-outline" onclick="joinMembership('supporter')" data-ja="参加する" data-cn="立即参与" data-en="Join Now">参加する</button>
+    </div>
+
+    <div class="membership-card featured">
+      <span class="membership-badge" data-ja="★ 最も人気" data-cn="★ 最受欢迎" data-en="★ Most Popular">★ 最も人気</span>
+      <div class="membership-price">
+        <div class="membership-price-num" style="color:var(--accent2);">¥ 5,000</div>
+        <div class="membership-price-unit" data-ja="/ 月  ·  年払い ¥50,000" data-cn="/ 月  ·  年付 ¥50,000" data-en="/ month  ·  ¥50,000/year">/ 月  ·  年払い ¥50,000</div>
+      </div>
+      <h3 class="membership-title" data-ja="パートナー会員" data-cn="合作伙伴会员" data-en="Partner Member">パートナー会員</h3>
+      <p class="membership-sub" data-ja="援助活動の最前線に立つパートナーとして。" data-cn="作为援助活动最前线的合作伙伴。" data-en="Stand at the forefront of aid activities.">援助活動の最前線に立つパートナーとして。</p>
+      <ul class="membership-features">
+        <li data-ja="ベーシック会員の全特典" data-cn="基础会员所有特权" data-en="All Basic Member benefits">ベーシック会員の全特典</li>
+        <li data-ja="四半期ごとのオンライン説明会参加" data-cn="季度在线说明会参与" data-en="Quarterly online briefings">四半期ごとのオンライン説明会参加</li>
+        <li data-ja="現地ボランティア優先参加権" data-cn="现场志愿者优先参与权" data-en="Priority field volunteer access">現地ボランティア優先参加権</li>
+        <li data-ja="年次報告書の先行入手" data-cn="年度报告书优先获取" data-en="Early access to annual report">年次報告書の先行入手</li>
+        <li data-ja="パートナー証明書の発行" data-cn="合作伙伴证书发行" data-en="Partnership certificate">パートナー証明書の発行</li>
+      </ul>
+      <button class="btn-membership btn-membership-primary" onclick="joinMembership('partner')" data-ja="パートナーになる" data-cn="成为合作伙伴" data-en="Become a Partner">パートナーになる</button>
+    </div>
+
+    <div class="membership-card">
+      <span class="membership-badge" data-ja="アンバサダー" data-cn="品牌大使" data-en="Ambassador">アンバサダー</span>
+      <div class="membership-price">
+        <div class="membership-price-num">¥ 20,000</div>
+        <div class="membership-price-unit" data-ja="/ 月  ·  年払い ¥200,000" data-cn="/ 月  ·  年付 ¥200,000" data-en="/ month  ·  ¥200,000/year">/ 月  ·  年払い ¥200,000</div>
+      </div>
+      <h3 class="membership-title" data-ja="アンバサダー会員" data-cn="大使会员" data-en="Ambassador Member">アンバサダー会員</h3>
+      <p class="membership-sub" data-ja="変革のリーダーとして組織の成長を牽引する。" data-cn="作为变革领导者，引领组织成长。" data-en="Lead organizational growth as a change champion.">変革のリーダーとして組織の成長を牽引する。</p>
+      <ul class="membership-features">
+        <li data-ja="パートナー会員の全特典" data-cn="合作伙伴会员所有特权" data-en="All Partner Member benefits">パートナー会員の全特典</li>
+        <li data-ja="理事会議へのオブザーバー参加" data-cn="董事会观察员参与资格" data-en="Board meeting observer access">理事会議へのオブザーバー参加</li>
+        <li data-ja="プロジェクト命名権（年1回）" data-cn="项目命名权（每年1次）" data-en="Project naming right (1/year)">プロジェクト命名権（年1回）</li>
+        <li data-ja="現地視察ツアーへの招待" data-cn="受邀参加现场考察参观" data-en="Field inspection tour invitation">現地視察ツアーへの招待</li>
+        <li data-ja="専任担当者によるサポート" data-cn="专属负责人支持服务" data-en="Dedicated account manager">専任担当者によるサポート</li>
+        <li data-ja="公式サイト・報告書への記載" data-cn="官网及报告书刊载" data-en="Listed on website & reports">公式サイト・報告書への記載</li>
+      </ul>
+      <button class="btn-membership btn-membership-outline" onclick="joinMembership('ambassador')" data-ja="アンバサダーになる" data-cn="成为大使" data-en="Become Ambassador">アンバサダーになる</button>
+    </div>
+  </div>
+
+  <!-- B2C 方式 -->
+  <p class="sec-eyebrow reveal" style="margin-top:6rem;"
+     data-ja="その他の支援方法" data-cn="其他支援方式" data-en="Other Support Methods">その他の支援方法</p>
+  <div class="b2c-grid reveal">
+    <div class="b2c-card">
+      <div class="b2c-card-icon">🛒</div>
+      <h3 class="b2c-card-title" data-ja="商品購入による支援" data-cn="通过商品购买支援" data-en="Support Through Product Sales">商品購入による支援</h3>
+      <p class="b2c-card-desc" data-ja="UECHTオリジナルグッズやパートナー企業の商品を購入することで、収益の一部が援助活動に充てられます。SDGs対応商品のラインナップを準備中です。" data-cn="通过购买UECHT原创周边或合作企业商品，部分收益将用于援助活动。SDGs相关商品系列正在筹备中。" data-en="Purchase UECHT original merchandise or partner products, with a portion of proceeds going to aid activities. SDG-aligned product line coming soon.">UECHTオリジナルグッズやパートナー企業の商品を購入することで、収益の一部が援助活動に充てられます。SDGs対応商品のラインナップを準備中です。</p>
+    </div>
+    <div class="b2c-card">
+      <div class="b2c-card-icon">💻</div>
+      <h3 class="b2c-card-title" data-ja="オンライン・ボランティア" data-cn="在线志愿者服务" data-en="Online Volunteer Services">オンライン・ボランティア</h3>
+      <p class="b2c-card-desc" data-ja="翻訳・データ整理・デザインなど、自宅からできるボランティア活動に参加いただけます。スキルを活かして世界に貢献しましょう。専門家ネットワークへの参加も歓迎します。" data-cn="参与翻译、数据整理、设计等可在家进行的志愿活动。发挥专长，为世界做贡献。欢迎加入专家网络。" data-en="Participate in volunteer activities from home — translation, data organization, design and more. Use your skills to contribute globally. Specialist network membership welcome.">翻訳・データ整理・デザインなど、自宅からできるボランティア活動に参加いただけます。スキルを活かして世界に貢献しましょう。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TRANSPARENCY / 資金透明性                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="transparency" style="padding-bottom:8rem;">
+  <p class="sec-eyebrow reveal" data-ja="資金の透明性" data-cn="资金透明度" data-en="Fund Transparency">資金の透明性</p>
+  <h2 class="sec-title reveal"
+      data-ja="すべての寄付を<br><span class='italic'>オープンに</span>"
+      data-cn="所有捐款<br><span class='italic'>公开透明</span>"
+      data-en="Every Donation<br><span class='italic'>Fully Transparent</span>">
+    すべての寄付を<br><span class="italic">オープンに</span>
+  </h2>
+
+  <div class="transparency-grid">
+    <div>
+      <p class="reveal" style="font-size:0.9rem; color:var(--silver); line-height:1.9; margin-bottom:2.5rem;"
+         data-ja="寄付金の配分を定期的に公開し、支援活動の透明性と説明責任を確保しています。"
+         data-cn="定期公开捐款分配情况，确保援助活动的透明度与问责制。"
+         data-en="We regularly publish the allocation of donations to ensure transparency and accountability in our aid activities.">
+        寄付金の配分を定期的に公開し、支援活動の透明性と説明責任を確保しています。
+      </p>
+      <div class="fund-allocations reveal">
+        <div class="fund-bar-item">
+          <div class="fund-bar-label">
+            <span data-ja="直接援助活動" data-cn="直接援助活动" data-en="Direct Aid Activities">直接援助活動</span>
+            <span style="color:var(--accent2);">72%</span>
+          </div>
+          <div class="fund-bar-track"><div class="fund-bar-fill" data-width="72"></div></div>
+        </div>
+        <div class="fund-bar-item">
+          <div class="fund-bar-label">
+            <span data-ja="現地スタッフ・物流" data-cn="当地员工/物流" data-en="Local Staff & Logistics">現地スタッフ・物流</span>
+            <span style="color:var(--accent2);">16%</span>
+          </div>
+          <div class="fund-bar-track"><div class="fund-bar-fill" data-width="16"></div></div>
+        </div>
+        <div class="fund-bar-item">
+          <div class="fund-bar-label">
+            <span data-ja="管理・監査費用" data-cn="管理/审计费用" data-en="Admin & Audit">管理・監査費用</span>
+            <span style="color:var(--accent2);">7%</span>
+          </div>
+          <div class="fund-bar-track"><div class="fund-bar-fill" data-width="7"></div></div>
+        </div>
+        <div class="fund-bar-item">
+          <div class="fund-bar-label">
+            <span data-ja="広報・啓発活動" data-cn="宣传/普及活动" data-en="Communications">広報・啓発活動</span>
+            <span style="color:var(--accent2);">5%</span>
+          </div>
+          <div class="fund-bar-track"><div class="fund-bar-fill" data-width="5"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="sec-eyebrow reveal" data-ja="活動報告・財務報告" data-cn="活动报告/财务报告" data-en="Activity & Financial Reports">活動報告・財務報告</p>
+      <div class="reports-list reveal">
+        <a href="#" class="report-item">
+          <div class="report-date">2025.01</div>
+          <div class="report-title" data-ja="2024年度 年次活動報告書" data-cn="2024年度年度活动报告" data-en="FY2024 Annual Activity Report">2024年度 年次活動報告書</div>
+          <div class="report-dl">PDF ↓</div>
+        </a>
+        <a href="#" class="report-item">
+          <div class="report-date">2024.10</div>
+          <div class="report-title" data-ja="2024年 Q3 財務報告" data-cn="2024年Q3财务报告" data-en="2024 Q3 Financial Report">2024年 Q3 財務報告</div>
+          <div class="report-dl">PDF ↓</div>
+        </a>
+        <a href="#" class="report-item">
+          <div class="report-date">2024.07</div>
+          <div class="report-title" data-ja="東南アジア教育支援 中間報告" data-cn="东南亚教育支援中期报告" data-en="SE Asia Education Aid Mid-term Report">東南アジア教育支援 中間報告</div>
+          <div class="report-dl">PDF ↓</div>
+        </a>
+        <a href="#" class="report-item">
+          <div class="report-date">2024.04</div>
+          <div class="report-title" data-ja="アフリカ医療支援 プロジェクト報告" data-cn="非洲医疗支援项目报告" data-en="Africa Medical Aid Project Report">アフリカ医療支援 プロジェクト報告</div>
+          <div class="report-dl">PDF ↓</div>
+        </a>
+        <a href="#" class="report-item">
+          <div class="report-date">2024.01</div>
+          <div class="report-title" data-ja="2023年度 年次活動報告書" data-cn="2023年度年度活动报告" data-en="FY2023 Annual Activity Report">2023年度 年次活動報告書</div>
+          <div class="report-dl">PDF ↓</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-wrap">
+        <img src="data:image/png;base64,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1zaEYjq/hzVBvxgEcVB5rZdoljbZNSTsiaRS1P11P4Z5t9xWsnnhddtdxiulHHWwn4XtB8RoescVRa6jfRzvgk1aSFIUqByUreWkiIiIiIiIiIiIiIiIi7NruFba62Ott9TJTVEZy17DghdZFggEYFfTXFpxacCvRGzHapR30RWu+FlJcsYbJyjn8vuu8PgrOXikEtcHNJBHIhXBsp2rPo3RWbU0rn05w2GsPEx9wf3t8en5Vu4WjdxkgHd6K/WPajewgrDnwd6+vir2RcYpGSxtkie17HDLXNOQR3hclX1ekREREREREREREREREREREREREREREREREREREWl7Tte0OkKHsmFtRdJm5hgB+yPvO7h+abUddUmkbb2cZbNc52nsIc/ZH3neH5rzNdbhWXS4TV9fO+eomdvPe48/8lM222Gc9JJ8v1/ZVPaHaEUQMEBxkOp5fuvrfLtX3u5S3C5VDp55DkkngB3DuC6KIrW1oaMAuZve57i5xxJRERZXyiIiIiIiIiIiIiIiIigqVBREKxmq7oLLYKuvJAe1m7Dnq88sLJgccKsNs11MtdTWZjiW07e1lx948h8FoXKp92py7idFN2Kg9+rGRHTU9gWiUNPNcLlDTMy6WolDcnmcnJP5r0JR00VHRwUkDd2OGMMA8gqn2Q230zUrq5zQWUcW8M/fPAK3icgEqO2eg3IjKeKn9tazfnbTt0aPM6eSIEwpVgVGRERFhQVC5LiURSFv+xS6GC9VFpkfhlWzfYDy32/uFX679hr3Wq80lwbzgla4+WePyUBtVaBd7RPSEZubl2jRS9krjQ1scw0Bz7OKuHalZhdtLOmhbvVFEe2jwOJb7QVH5zxHI8V6ZjMU0AczDopWggd7SP8ANefdX2w2fUdZQ8d1jyWf0niFy32OXxz4prVKc2fE3vOB88+9XPb63AOZWx6OyP1B71iQmVHVF3Fc1XJEREREREREREREREREREREREVk7KNpU+nZY7XeJHzWpxw13N0HiO9vgvRFJUQVdNHU00rJoZWh8cjHZa4HkQV4uVibI9oc+maptsuUjpbTK7zMBPUeHeFBXO1iTGWIZ8Rz/dXPZ7aM05FPUn4OB5dvV9OxekkXzpp4amnjqKeRskUjQ5j2nIcDyIX0VXXRgQRiERERZRERERERERERERERERERERERERavtF1hRaRszqmXdlq5AW08GeL3d58Aspqq+0GnLLPdbg/EUQ9Vo+1I7o0eJXlXWGo7hqi9zXSvdguOI4wfViZ0aP8A5xUpbKA1L953yjz6lXNob2LfF0cZ/Edp1Dn6Lp3u6Vt5uk9yuE7pqmd285x/IdwHIBdNEVwADRgFyp7nPcXOOJKIiLK+UREREREREREREREREREREUFSoKIoc5jGl8hw1jS53kBlefL/AF77ne6y4vJJmlLhno3kB8Fcu0OuNu0bXzNdiSZogj8C44PyVGBri0MYMud6o81VdoZzvtiHDNdJ2JpA2KSpdxyHdmf51K4Nj1AKfSxrXjD62Vzs49lvqj9VuXVda0UjaCzUNEwbohgYzHjjj812ngB2ArDRwiGBrOQVIutSaqqklPEnDsRERbKjUREREUFSiIuKlvF3HkVB5qWjJwOaL6CvXZjXmv0ZRyPJMsGad5z93kfhhattutoElvvDBgSZp5uHUcWlTsMrsG6W0kkHdnY35H9Ft+0OgFy0bcKYM3pI2CeL+phz+WV+YJJP8L7eOcMmOf8A/WT0xXZWMF52aAPzBvm3/jzVCOGHEdy4rlne9YczxXE81+n8MMlxorkiIi+URERERERERERERERERERERERFaGxbaE+x1DLDd5S62SuxDI4/6u4/+093Q+9ehWOa9gexwc0jII5ELxUrv2E6/wC1Eel7zN9YBiimcftD/DJ7+74dyr12t2OM8Y7R9/VXrZi/bpFHOcvyn7engrnREVbXQEREREREREREREREREREREXCeWOCF80z2xxsaXOc44AA5krmqW/iA1qWNOlLbLguANa9p6dI/wB/gtmkpnVMoY1aFyuEdBTumf3DmeS0fazrSXVl8c2nc5ttpnFtO37/AHvPn+S0pEV4iibEwMZoFxyqqZKqV00hxJRERei10REREREREREREREREREREREREUFSoRFXu22rLaO228Hg97pnDyGAtD0lTemamttMW5DqhpI8BxWx7Zagyamgg3uENOOHmV09lMIm1nA5w/uo3v8AfjCpVX+PcsOsBdbtgFJYd8ZfCT3nFXS45PgCuJOSSoQK6AYLkxK5LiuS44WV8oinCnHDgizgoUqCiIQoKDgUQLICBbbskqvRdbU7XEhtRG+I+ZGR+SuyVrZInRvHquaWOz4jC89aVqDTajt0wdgNqWZ95wvRDgCC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+I+StNu2UqqjB0/wN8/Dh3qpNDbF5ZOzrdUzdk3mKOF2XH+t3TyHxVzWm2UFpo2UlupYqaFg4Njbj/8AK7aKuVNZLUnF57uCvtvtVLQNwhbnz4nvRERaqkkREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREWq6o2faX1DvyVduZDUO/n0/qPz3nHA+9bUi9I5XxneYcCvGeniqG7krQ4daoLUuxO60xdLZK2KtjHERy+o/48iq5ven71ZZCy6WyppcHG89h3T5O5L2GuE0MU8ZjmiZIwjBa9oIPuKloL3MzKQb3kVV6zY+klzhcWHxHr5rxYi9R3/Zjo27lz3WttHM7+ZSO7P/p+z8lol62GSjefZ70146R1MeD/AMzf2UrFeaZ/zHDtVZqtk6+HNgDx1H7HBUui3W7bLtZW/eP0Z6Uwe1TvD/lzWr11pulC4trLfVQEc9+IgKRjnik+RwKg5qKog/usI7QV0SmUIQheq1kBAz3ngt40VdKe7WqXRl6k3YZ+NDO4/wB1IOQytGXIbxcMO3SOII5hRN5tMd1puicd1w+JruLXDQ9f3CkbdXvo5t8DEEYEcxyXZutFVW25TUNYwtqIXlrhjh5jwK62M/ZGVt01QdXWgOkY0363xYJHOrhH/uCrfU9yqIImW22DeudaC2Nv+E3kZHdwC8rdc3ywEVIwlZgHAc9ARzDtR4LYntu9OBAcWOzB5Djj2cVgNVvm1Xf26ZoHltupHCS4zt5F33PEjuW50lPDR0kVHTMEcETQ1jR0C6enbPTWK1MooCXuJ35ZT9qR55uJWQ5LfpYSCZpPmd5dS+LjWMe1tPB/bbp1nie9T1UqApW4ohEXOKKWV27FG+R3c1uSs3a9G6ouZHolkrHA+06MtHzXw6RrBi44L1jgklOEbSewYrAorNs+xfU9WWurpqShYee8/fd8At2sexPT1LuvulbV3B45taeyYfhx+a0ZbrSx/mx7FM02zdxn/Jujry/fyXn6KOSWQRxRue9xwGtGSfctx07sy1beS14t5o4T/MqfU4eXNejrJpyw2WMMtdppKX8TIxvHzceJ+Kyqi5r645RNw7VZKTYyNudRJj1DLz/4VU6Y2K2aj3Zr3VSXCQcTGz1I/wByrLtVst1qpRS22igpIR7MTA3Pn3rtooeeqmnP4jsVaqO20tGMIWAdfHx1RERa63kREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREXCWGKUYliY8dzmgoiIRisRcNJ6ar8+l2OglJ6mEZ+K1+u2U6IqfW+i3wO74Z3N+WcIi24KiVrsA4+JUbV0VM9pLo2k9gWuXzZBpaCAywT3SM9wmaR82lV7ftI22hJEM9W7H3nN/RqIrJSyPc3MqgXGniY/wCFoHctXe19tqmVNHNLHNE7eY8HiCupV0dM7VN0uYiayorJWukLeQ9UcGjoM8cd6IsTsb75G7DPA/RaEL3CkkAOSzFrtFNVFokfKAT7JH7Le9O7NrFcSzt6q4t3ue5Iwf8AsRFtTvcBkVijjY53xAFbvSbHdGx47SOvn/rqMf8ApAWdodnejKNw7Kw0ryORlBkP/USiKs1VTNjhvnxK6FbqCl3ceibj2BZ+jtVso27tLb6WEfgiAXcAA5IijiSdVOtY1owaMEREWF9IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/9k=" alt="UECHT Logo" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+        <div class="logo-text"><span class="logo-main">UECHT GROUP</span></div>
+      </a>
+      <p data-ja="寰宇を極め、極限の創造力と先端技術で、世界の未来を創ります。" data-cn="极创寰宇，以极限创造力与尖端科技，共创世界未来。" data-en="Extreme creators of the universe, shaping the future with limitless creativity and cutting-edge technology.">寰宇を極め、極限の創造力と先端技術で、世界の未来を創ります。</p>
+    </div>
+    <div>
+      <p class="footer-col-title" data-ja="事業領域" data-cn="业务领域" data-en="Services">事業領域</p>
+      <div class="footer-links">
+        <a href="index.html#services" data-ja="新エネルギー・AI・量子技術" data-cn="新能源·AI·量子计算" data-en="New Energy · AI · Quantum">新エネルギー・AI・量子技術</a>
+        <a href="index.html#services" data-ja="生物技術・生物霊学" data-cn="生物技术·生物灵学" data-en="Biotech · Bio-Spirit">生物技術・生物霊学</a>
+        <a href="index.html#services" data-ja="深地・深海・宇宙探索" data-cn="深地·深海·深空探索" data-en="Deep Exploration">深地・深海・宇宙探索</a>
+        <a href="index.html#services" data-ja="玄学・文化・観光" data-cn="玄学·文化·旅游" data-en="Metaphysics · Culture">玄学・文化・観光</a>
+      </div>
+    </div>
+      <div>
+      <p class="footer-col-title" data-ja="慈善・援助事業" data-cn="慈善援助事业" data-en="Charity & Aid">慈善・援助事業</p>
+      <div class="footer-links">
+        <a href="charity.html" data-ja="援助プロジェクト" data-cn="援助项目" data-en="Aid Projects">援助プロジェクト</a>
+        <a href="charity.html#donate" data-ja="寄付・捐款" data-cn="捐款方式" data-en="Donate">寄付・捐款</a>
+        <a href="charity.html#membership" data-ja="会員・支援プラン" data-cn="会员计划" data-en="Membership Plans">会員・支援プラン</a>
+        <a href="charity.html#transparency" data-ja="活動報告" data-cn="活动报告" data-en="Activity Reports">活動報告</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#about" data-ja="会社概要" data-cn="关于我们" data-en="About">会社概要</a>
+        <a href="index.html#news" data-ja="ニュース" data-cn="新闻" data-en="News">ニュース</a>
+        <a href="index.html" data-ja="採用情報" data-cn="招聘信息" data-en="Careers">採用情報</a>
+        <a href="index.html" data-ja="IR情報" data-cn="投资者关系" data-en="Investor Relations">IR情報</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title" data-ja="ポリシー" data-cn="政策" data-en="Policies">ポリシー</p>
+      <div class="footer-links">
+        <a href="index.html" data-ja="プライバシーポリシー" data-cn="隐私政策" data-en="Privacy Policy">プライバシーポリシー</a>
+        <a href="index.html" data-ja="利用規約" data-cn="使用条款" data-en="Terms of Use">利用規約</a>
+        <a href="index.html" data-ja="情報セキュリティ" data-cn="信息安全" data-en="Security Policy">情報セキュリティ</a>
+        <a href="index.html#contact" data-ja="お問い合わせ" data-cn="联系我们" data-en="Contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 UECHT Group. All Rights Reserved.</span>
+    <div class="lang-switch" style="border-color:rgba(200,212,224,0.15)">
+      <button class="lang-btn active" onclick="setLang('ja')">JP</button>
+      <button class="lang-btn" onclick="setLang('cn')">CN</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="js/main.js"></script>
+<script src="js/donate.js"></script>
+
+<!-- ── 寄付完了オーバーレイ ── -->
+<div id="donation-success-overlay" style="display:none; position:fixed; inset:0; background:rgba(7,24,32,0.95); z-index:999; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding:2rem;">
+  <div style="max-width:480px;">
+    <div style="font-size:4rem; margin-bottom:1.5rem;">🙏</div>
+    <h2 style="font-family:var(--font-en); font-size:2rem; color:var(--white); margin-bottom:1rem;">ご寄付ありがとうございます</h2>
+    <p style="color:var(--silver); margin-bottom:0.5rem;">寄付金額: <strong class="success-amount" style="color:var(--accent2); font-family:var(--font-mono);"></strong></p>
+    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:2rem;">領収書をご登録のメールアドレスにお送りします。</p>
+    <button onclick="closeDonationSuccess()" style="padding:0.8rem 2.5rem; background:var(--accent); color:white; border:none; cursor:pointer; font-family:var(--font-mono); letter-spacing:0.1em;">閉じる</button>
+  </div>
+</div>
+
+<!-- PayPal/WeChat QR コンテナ -->
+<div id="paypal-button-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; border-radius:4px;"></div>
+<div id="wechat-qr-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; text-align:center; border-radius:4px;"><p style="color:#333; margin-bottom:0.5rem; font-size:0.8rem;">WeChat Pay QR</p></div>
+
+</body>
+</html>
