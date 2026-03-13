@@ -118,10 +118,8 @@ function copyText(text, btn) {
 }
 
 // ── CONTACT FORM SUBMIT ──────────────────
-// NOTE: Replace FORM_ENDPOINT with your actual backend URL or form service
-// e.g. Formspree: https://formspree.io/f/YOUR_ID
-// e.g. custom API: /api/contact
-var CONTACT_FORM_ENDPOINT = '/api/contact'; // ← 替换为实际接口
+// Formspree を使用: https://formspree.io/f/YOUR_ID を取得後に差し替え
+var CONTACT_FORM_ENDPOINT = 'https://formspree.io/f/mnjgveao';
 
 document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('contact-form');
@@ -134,17 +132,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var sendingText = currentLang === 'en' ? 'Sending...' : currentLang === 'cn' ? '发送中...' : '送信中...';
     btn.textContent = sendingText;
     btn.disabled = true;
-    var data = {
-      name: form.querySelector('[name="name"]') ? form.querySelector('[name="name"]').value : '',
-      company: form.querySelector('[name="company"]') ? form.querySelector('[name="company"]').value : '',
-      email: form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '',
-      type: form.querySelector('[name="type"]') ? form.querySelector('[name="type"]').value : '',
-      message: form.querySelector('[name="message"]') ? form.querySelector('[name="message"]').value : ''
-    };
+    var formData = new FormData(form);
     fetch(CONTACT_FORM_ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: formData,
+      headers: { 'Accept': 'application/json' }
     })
     .then(function(res) {
       if (res.ok) {
