@@ -149,9 +149,11 @@ section { padding: 8rem 5vw; }
 .ring-2 .ring-dot { bottom: 0; right: 20%; transform: translate(50%, 50%); }
 .ring-3 .ring-dot { top: 20%; left: 0; transform: translate(-50%, -50%); }
 .diagram-center {
-  position: absolute; inset: 42%; background: var(--accent);
+  position: absolute; inset: 38%; border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 24px rgba(0,168,232,0.35), 0 0 0 2px rgba(0,168,232,0.2);
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.1em; color: var(--white);
+  background: var(--navy);
 }
 .about-text p { font-size: 1.05rem; color: var(--silver); line-height: 1.9; margin-bottom: 1.8rem; }
 .about-text p:first-child { font-size: 1.2rem; color: var(--white); }
