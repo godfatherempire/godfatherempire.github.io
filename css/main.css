@@ -127,7 +127,7 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
 .stat-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
 
 /* SECTIONS */
-section { padding: 8rem 5vw; }
+section { padding: 5rem 5vw; }
 .sec-eyebrow {
   font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.3em; color: var(--accent2);
   text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;
@@ -188,7 +188,7 @@ section { padding: 8rem 5vw; }
 .tag { font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.1em; padding: 0.25rem 0.7rem; border: 1px solid var(--rule); color: var(--muted); }
 
 /* NEWS */
-#news { background: var(--navy-mid); }
+#news { background: var(--navy-mid); padding: 4rem 5vw; }
 .news-layout { display: grid; grid-template-columns: 260px 1fr; gap: 6rem; margin-top: 4rem; }
 .news-filter { position: sticky; top: 100px; align-self: start; }
 .filter-title { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; margin-bottom: 1.5rem; }
@@ -251,7 +251,7 @@ footer { background: #060e1a; padding: 4rem 5vw 2rem; border-top: 1px solid var(
 .footer-brand p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; margin-top: 1.5rem; max-width: 280px; }
 .footer-col-title { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.2em; color: var(--accent2); text-transform: uppercase; margin-bottom: 1.5rem; }
 .footer-links { display: flex; flex-direction: column; gap: 0.8rem; }
-.footer-links a { font-size: 0.88rem; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a { font-size: 0.82rem; color: var(--muted); text-decoration: none; transition: color 0.3s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .footer-links a:hover { color: var(--white); }
 .footer-bottom { border-top: 1px solid var(--rule); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
 .footer-copy { font-family: var(--font-mono); font-size: 0.58rem; color: var(--muted); letter-spacing: 0.1em; }
@@ -409,7 +409,7 @@ footer { background: #060e1a; padding: 4rem 5vw 2rem; border-top: 1px solid var(
 @media (max-width: 960px) {
   header { padding: 0 1.5rem; }
   nav .nav-link { display: none; }
-  section { padding: 5rem 5vw; }
+  section { padding: 3.5rem 5vw; }
   .about-grid, .services-intro, .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
   .services-grid { grid-template-columns: 1fr; }
   .news-layout { grid-template-columns: 1fr; }
