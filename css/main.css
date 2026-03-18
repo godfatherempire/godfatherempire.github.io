@@ -224,6 +224,8 @@ section { padding: 5rem 5vw; }
 .contact-info-item { display: flex; gap: 1.5rem; align-items: flex-start; }
 .info-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.2em; color: var(--accent2); text-transform: uppercase; min-width: 80px; padding-top: 0.1rem; }
 .info-val { font-size: 0.92rem; color: var(--silver); line-height: 1.6; }
+.info-val a { color: var(--silver); text-decoration: none; }
+.info-val a:hover { color: var(--white); }
 .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
 .form-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; }
