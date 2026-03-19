@@ -634,21 +634,25 @@ function renderLang(lang) {
 /g, '<br>');
   document.getElementById('side-l').textContent = d.eyebrow_side;
   // Update lang buttons
+  var langMap = { 'jp': 'ja', 'cn': 'cn', 'en': 'en' };
   document.querySelectorAll('.lb').forEach(function(b) {
-    b.classList.toggle('active', b.textContent.toLowerCase() === lang);
+    b.classList.toggle('active', langMap[b.textContent.toLowerCase()] === lang);
   });
   // Reset quotes
+  clearInterval(qTimer);
   currentQ = 0;
-  document.getElementById('q0').textContent = d.quotes[0];
-  document.getElementById('q0').className = 'quote-line active';
-  document.getElementById('q1').textContent = '';
-  document.getElementById('q1').className = 'quote-line enter';
+  var q0el = document.getElementById('q0');
+  var q1el = document.getElementById('q1');
+  q0el.textContent = d.quotes[0];
+  q0el.className = 'quote-line active';
+  q1el.textContent = '';
+  q1el.className = 'quote-line enter';
   startQuotes();
 }
 
 function startQuotes() {
   clearInterval(qTimer);
-  qTimer = setInterval(nextQuote, 4200);
+  qTimer = setInterval(nextQuote, 5000);
 }
 
 function nextQuote() {
