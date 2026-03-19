@@ -406,11 +406,11 @@
 
     // Responsive size & position
     var vw = window.innerWidth;
-    var size = vw < 640 ? 180 : vw < 1024 ? 260 : 340;
+    var size = vw < 640 ? 80 : vw < 1024 ? 110 : 140;
     wrapper.style.width  = size + 'px';
     wrapper.style.height = size + 'px';
-    wrapper.style.right  = '-' + Math.round(size * 0.28) + 'px';
-    wrapper.style.bottom = '-' + Math.round(size * 0.28) + 'px';
+    wrapper.style.right  = '1.5rem';
+    wrapper.style.bottom = '1.5rem';
 
     // Trail glow
     var trail = document.createElement('div');
