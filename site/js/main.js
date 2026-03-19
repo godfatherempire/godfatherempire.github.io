@@ -122,6 +122,10 @@ function copyText(text, btn) {
 var CONTACT_FORM_ENDPOINT = 'https://formspree.io/f/mnjgveao';
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Restore saved language on every page (must run before form check)
+  var savedLang = localStorage.getItem('uecht_lang');
+  if (savedLang && savedLang !== 'ja') setLang(savedLang);
+
   var form = document.getElementById('contact-form');
   if (!form) return;
   form.addEventListener('submit', function(e) {
@@ -154,7 +158,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Restore saved language
-  var savedLang = localStorage.getItem('uecht_lang');
-  if (savedLang && savedLang !== 'ja') setLang(savedLang);
 });
