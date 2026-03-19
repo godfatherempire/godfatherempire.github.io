@@ -9,7 +9,8 @@
   --muted: #8fa3ba;
   --rule: rgba(200,212,224,0.15);
   --font-jp: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-  --font-cn: 'Noto Sans SC', 'PingFang SC', sans-serif;
+  --font-cn: 'Noto Serif SC', 'Noto Serif TC', 'STSong', serif;
+  --font-cn-sans: 'Noto Sans SC', 'PingFang SC', sans-serif;
   --font-en: 'Playfair Display', Georgia, serif;
   --font-mono: 'DM Mono', monospace;
 }
@@ -451,7 +452,52 @@ footer { background: #060e1a; padding: 4rem 5vw 2rem; border-top: 1px solid var(
 /* ── Chinese Serif Headings ── */
 :lang(zh) .sec-title,
 :lang(zh) .hero-headline,
+/* ── Chinese Serif Font System ── */
 .lang-cn .sec-title,
 .lang-cn .hero-headline {
   font-family: 'Noto Serif SC', 'Noto Serif TC', serif;
+}
+
+/* Apply Noto Serif SC to ALL text in CN mode */
+body.lang-cn,
+body.lang-cn p,
+body.lang-cn h1,
+body.lang-cn h2,
+body.lang-cn h3,
+body.lang-cn h4,
+body.lang-cn li,
+body.lang-cn a:not(.btn-primary):not(.btn-outline):not(.logo-wrap),
+body.lang-cn td,
+body.lang-cn blockquote {
+  font-family: 'Noto Serif SC', 'Noto Serif TC', serif;
+}
+
+/* Headings get bold weight in CN */
+body.lang-cn h1,
+body.lang-cn h2,
+body.lang-cn h3,
+body.lang-cn .hero-headline,
+body.lang-cn .sec-title {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Nav, buttons, mono elements stay sans/mono */
+body.lang-cn .nav-link,
+body.lang-cn .lang-btn,
+body.lang-cn .sec-eyebrow,
+body.lang-cn .service-num,
+body.lang-cn .news-date,
+body.lang-cn .news-cat,
+body.lang-cn .tag,
+body.lang-cn .btn-primary,
+body.lang-cn .btn-outline,
+body.lang-cn .filter-btn,
+body.lang-cn .footer-col-title,
+body.lang-cn .stat-label,
+body.lang-cn [class*="mono"],
+body.lang-cn [style*="font-mono"] {
+  font-family: var(--font-cn-sans);
+  letter-spacing: 0.05em;
 }
