@@ -73,8 +73,8 @@
     </p>
     <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;"
        data-ja="事業領域 — ロボティクス" data-cn="業務領域 — 機器人技術" data-en="Business Domain — Robotics">事業領域 — ロボティクス</p>
-    <h1 class="hero-headline reveal" style="animation-delay:0.15s;" data-ja="🦾 生命を模倣した<br><span class='accent'>次世代ロボット</span>" data-cn="🦾 模擬生命的<br><span class='accent'>下一代機器人</span>" data-en="🦾 Next-Generation Robots<br><span class='accent'>Inspired by Life</span>">
-      🦾 生命を模倣した<br><span class='accent'>次世代ロボット</span>
+    <h1 class="hero-headline reveal" id="page-hero-title" style="animation-delay:0.15s;">
+      🦾 生命を模倣した<br><span class="accent">次世代ロボット</span>
     </h1>
     <p class="hero-sub reveal" style="animation-delay:0.3s; max-width:620px;"
        data-ja="インテリジェント制御システムとマイクロ生体模倣ロボットを開発し、医療・産業・宇宙探査の分野に革新をもたらします。" data-cn="開發智能控制系統與微型仿生機器人，為醫療、工業及宇宙探索領域帶來創新。" data-en="We develop intelligent control systems and micro bionic robots, bringing innovation to medical, industrial, and space exploration fields.">インテリジェント制御システムとマイクロ生体模倣ロボットを開発し、医療・産業・宇宙探査の分野に革新をもたらします。</p>
@@ -232,7 +232,55 @@
 <div id="paypal-button-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; border-radius:4px;"></div>
 <div id="wechat-qr-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; text-align:center; border-radius:4px;"><p style="color:#333; margin-bottom:0.5rem; font-size:0.8rem;">WeChat Pay QR</p></div>
 
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🦾 生命を模倣した<br><span class="accent">次世代ロボット</span>',
+    cn: '🦾 模擬生命的<br><span class="accent">下一代機器人</span>',
+    en: '🦾 Next-Generation Robots<br><span class="accent">Inspired by Life</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🦾 生命を模倣した<br><span class="accent">次世代ロボット</span>',
+    cn: '🦾 模擬生命的<br><span class="accent">下一代機器人</span>',
+    en: '🦾 Next-Generation Robots<br><span class="accent">Inspired by Life</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>

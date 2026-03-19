@@ -73,8 +73,8 @@
     </p>
     <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;"
        data-ja="事業領域 — 極限探索" data-cn="業務領域 — 極限探索" data-en="Business Domain — Extreme Exploration">事業領域 — 極限探索</p>
-    <h1 class="hero-headline reveal" style="animation-delay:0.15s;" data-ja="🚀 人類の知の境界を<br><span class='accent'>宇宙の果てまで</span>" data-cn="🚀 將人類知識的邊界<br><span class='accent'>延伸至宇宙盡頭</span>" data-en="🚀 Expanding the Frontiers<br>of Human Knowledge to <span class='accent'>the Cosmos</span>">
-      🚀 人類の知の境界を<br><span class='accent'>宇宙の果てまで</span>
+    <h1 class="hero-headline reveal" id="page-hero-title" style="animation-delay:0.15s;">
+      🚀 人類の知の境界を<br><span class="accent">宇宙の果てまで</span>
     </h1>
     <p class="hero-sub reveal" style="animation-delay:0.3s; max-width:620px;"
        data-ja="地球の深部・深海・宇宙空間の三次元探索事業を推進し、極限環境技術と資源探査の新フロンティアを開拓します。" data-cn="推進地球深部、深海、宇宙空間的三維探索事業，開拓極端環境技術與資源勘探的新前沿。" data-en="We advance three-dimensional exploration across Earth's deep interior, deep oceans, and outer space, pioneering new frontiers in extreme environment technology and resource exploration.">地球の深部・深海・宇宙空間の三次元探索事業を推進し、極限環境技術と資源探査の新フロンティアを開拓します。</p>
@@ -232,7 +232,55 @@
 <div id="paypal-button-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; border-radius:4px;"></div>
 <div id="wechat-qr-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; text-align:center; border-radius:4px;"><p style="color:#333; margin-bottom:0.5rem; font-size:0.8rem;">WeChat Pay QR</p></div>
 
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🚀 人類の知の境界を<br><span class="accent">宇宙の果てまで</span>',
+    cn: '🚀 將人類知識的邊界<br><span class="accent">延伸至宇宙盡頭</span>',
+    en: '🚀 Expanding the Frontiers of Human Knowledge to<br><span class="accent">the Cosmos</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🚀 人類の知の境界を<br><span class="accent">宇宙の果てまで</span>',
+    cn: '🚀 將人類知識的邊界<br><span class="accent">延伸至宇宙盡頭</span>',
+    en: '🚀 Expanding the Frontiers of Human Knowledge to<br><span class="accent">the Cosmos</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>

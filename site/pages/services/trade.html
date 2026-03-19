@@ -73,8 +73,8 @@
     </p>
     <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;"
        data-ja="事業領域 — グローバルビジネス" data-cn="業務領域 — 全球商業" data-en="Business Domain — Global Business">事業領域 — グローバルビジネス</p>
-    <h1 class="hero-headline reveal" style="animation-delay:0.15s;" data-ja="🏢 グローバルな商流で<br><span class='accent'>世界をつなぐ</span>" data-cn="🏢 以全球商流<br><span class='accent'>連接世界</span>" data-en="🏢 Connecting the World<br>Through <span class='accent'>Global Commerce</span>">
-      🏢 グローバルな商流で<br><span class='accent'>世界をつなぐ</span>
+    <h1 class="hero-headline reveal" id="page-hero-title" style="animation-delay:0.15s;">
+      🏢 グローバルな商流で<br><span class="accent">世界をつなぐ</span>
     </h1>
     <p class="hero-sub reveal" style="animation-delay:0.3s; max-width:620px;"
        data-ja="国際貿易・グローバル人材派遣・不動産開発・運営を一体的に展開し、多様な商業エコシステムを構築します。" data-cn="一體化開展國際貿易、全球人才派遣與房地產開發運營，構建多元化商業生態系統。" data-en="We integrally develop international trade, global talent dispatch, and real estate development and management, building a diverse commercial ecosystem.">国際貿易・グローバル人材派遣・不動産開発・運営を一体的に展開し、多様な商業エコシステムを構築します。</p>
@@ -232,7 +232,55 @@
 <div id="paypal-button-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; border-radius:4px;"></div>
 <div id="wechat-qr-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; text-align:center; border-radius:4px;"><p style="color:#333; margin-bottom:0.5rem; font-size:0.8rem;">WeChat Pay QR</p></div>
 
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🏢 グローバルな商流で<br><span class="accent">世界をつなぐ</span>',
+    cn: '🏢 以全球商流<br><span class="accent">連接世界</span>',
+    en: '🏢 Connecting the World Through<br><span class="accent">Global Commerce</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🏢 グローバルな商流で<br><span class="accent">世界をつなぐ</span>',
+    cn: '🏢 以全球商流<br><span class="accent">連接世界</span>',
+    en: '🏢 Connecting the World Through<br><span class="accent">Global Commerce</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>

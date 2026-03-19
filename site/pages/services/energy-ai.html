@@ -73,8 +73,8 @@
     </p>
     <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;"
        data-ja="事業領域 — テクノロジー" data-cn="業務領域 — 科技" data-en="Business Domain — Technology">事業領域 — テクノロジー</p>
-    <h1 class="hero-headline reveal" style="animation-delay:0.15s;" data-ja="⚡ 次世代エネルギーと<br><span class='accent'>知性の革命</span>" data-cn="⚡ 下一代能源與<br><span class='accent'>智慧革命</span>" data-en="⚡ Next-Generation Energy &<br><span class='accent'>Intelligence Revolution</span>">
-      ⚡ 次世代エネルギーと<br><span class='accent'>知性の革命</span>
+    <h1 class="hero-headline reveal" id="page-hero-title" style="animation-delay:0.15s;">
+      ⚡ 次世代エネルギーと<br><span class="accent">知性の革命</span>
     </h1>
     <p class="hero-sub reveal" style="animation-delay:0.3s; max-width:620px;"
        data-ja="新エネルギー開発・AI応用・量子コンピュータ技術を融合し、次世代のエネルギーと知性化社会を構築します。" data-cn="融合新能源開發、AI應用與量子計算機技術，構建下一代能源與智能化社會。" data-en="Integrating new energy development, AI applications, and quantum computing technology to build the next-generation energy and intelligent society.">新エネルギー開発・AI応用・量子コンピュータ技術を融合し、次世代のエネルギーと知性化社会を構築します。</p>
@@ -232,7 +232,55 @@
 <div id="paypal-button-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; border-radius:4px;"></div>
 <div id="wechat-qr-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; text-align:center; border-radius:4px;"><p style="color:#333; margin-bottom:0.5rem; font-size:0.8rem;">WeChat Pay QR</p></div>
 
+<script>
+(function() {
+  var heroTitles = {
+    ja: '⚡ 次世代エネルギーと<br><span class="accent">知性の革命</span>',
+    cn: '⚡ 下一代能源與<br><span class="accent">智慧革命</span>',
+    en: '⚡ Next-Generation Energy &<br><span class="accent">Intelligence Revolution</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>
+<script>
+(function() {
+  var heroTitles = {
+    ja: '⚡ 次世代エネルギーと<br><span class="accent">知性の革命</span>',
+    cn: '⚡ 下一代能源與<br><span class="accent">智慧革命</span>',
+    en: '⚡ Next-Generation Energy &<br><span class="accent">Intelligence Revolution</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>

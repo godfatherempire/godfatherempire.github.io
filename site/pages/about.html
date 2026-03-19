@@ -69,8 +69,8 @@
     </p>
     <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;"
        data-ja="会社概要" data-cn="公司概要" data-en="About UECHT">会社概要</p>
-    <h1 class="hero-headline reveal" style="animation-delay:0.15s;" data-ja="🌐 寰宇を極め、<br><span class='accent'>未来を創る</span>" data-cn="🌐 極創寰宇，<br><span class='accent'>創造未來</span>" data-en="🌐 Extreme Creators<br>of the <span class='accent'>Universe</span>">
-      🌐 寰宇を極め、<br><span class='accent'>未来を創る</span>
+    <h1 class="hero-headline reveal" id="page-hero-title" style="animation-delay:0.15s;">
+      🌐 寰宇を極め、<br><span class="accent">未来を創る</span>
     </h1>
     <p class="hero-sub reveal" style="animation-delay:0.3s;max-width:620px;"
        data-ja="人類の進化と発展の促進に尽力する。極限の創造力と先端科学技術で、より豊かな人類の未来を切り拓きます。" data-cn="致力促進人類進化發展。以極限創造力與尖端科技，開創更美好的人類未來。" data-en="Dedicated to advancing human evolution with extreme creativity and cutting-edge science.">人類の進化と発展の促進に尽力する。極限の創造力と先端科学技術で、より豊かな人類の未来を切り拓きます。</p>
@@ -235,7 +235,55 @@
 <div id="paypal-button-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; border-radius:4px;"></div>
 <div id="wechat-qr-container" style="display:none; position:fixed; bottom:2rem; right:2rem; background:white; padding:1.5rem; z-index:500; text-align:center; border-radius:4px;"><p style="color:#333; margin-bottom:0.5rem; font-size:0.8rem;">WeChat Pay QR</p></div>
 
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🌐 寰宇を極め、<br><span class="accent">未来を創る</span>',
+    cn: '🌐 極創寰宇，<br><span class="accent">創造未來</span>',
+    en: '🌐 Extreme Creators of<br><span class="accent">the Universe</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>
+<script>
+(function() {
+  var heroTitles = {
+    ja: '🌐 寰宇を極め、<br><span class="accent">未来を創る</span>',
+    cn: '🌐 極創寰宇，<br><span class="accent">創造未來</span>',
+    en: '🌐 Extreme Creators of<br><span class="accent">the Universe</span>'
+  };
+  var origSetLang = window.setLang;
+  function applyHeroLang(lang) {
+    var el = document.getElementById('page-hero-title');
+    if (el) el.innerHTML = heroTitles[lang] || heroTitles.ja;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('uecht_lang') || 'ja';
+    applyHeroLang(saved);
+    // Patch setLang to also update hero
+    var _orig = window.setLang;
+    window.setLang = function(lang) {
+      _orig(lang);
+      applyHeroLang(lang);
+    };
+  });
+})();
+</script>
 </body>
 </html>
