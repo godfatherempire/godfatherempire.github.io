@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UECHT GROUP — 採用情報</title>
+<title>UECHT GROUP — 活動報告</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Sans+SC:wght@200;300;400&family=Noto+Serif+SC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/main.css">
@@ -15,6 +15,21 @@
 .page-breadcrumb a { color:var(--accent2); text-decoration:none; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 .reveal { opacity:0; animation:fadeUp 0.7s ease forwards; }
+</style>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<style>
+.page-hero { min-height:45vh; display:flex; flex-direction:column; justify-content:center; padding:5rem 5vw 4rem; position:relative; overflow:hidden; background:linear-gradient(160deg,#071820 0%,#0d2530 60%,#0a1e2a 100%); }
+.page-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; mask-image:radial-gradient(ellipse at 30% 60%,black 20%,transparent 70%); }
+.page-hero::after { content:''; position:absolute; right:0; top:0; bottom:0; width:40%; background:radial-gradient(ellipse at right center,#1a0a4e22 0%,transparent 70%); }
+.page-breadcrumb { font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.2em; color:var(--muted); margin-bottom:1.5rem; }
+.page-breadcrumb a { color:var(--accent2); text-decoration:none; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.reveal { opacity:0; animation:fadeUp 0.7s ease forwards; }
+.activity-tag { display:inline-block; font-family:var(--font-mono); font-size:0.55rem; letter-spacing:0.12em; padding:0.2rem 0.6rem; border-radius:2px; margin-bottom:0.8rem; }
+.activity-card { background:var(--navy); border:1px solid var(--rule); padding:2rem; transition:border-color 0.3s; }
+.activity-card:hover { border-color:rgba(0,168,232,0.4); }
+.timeline-dot { width:10px; height:10px; border-radius:50%; background:var(--accent2); flex-shrink:0; margin-top:0.35rem; }
+.timeline-line { width:1px; background:var(--rule); flex:1; min-height:24px; }
 </style>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
@@ -49,68 +64,171 @@
     </div>
   </nav>
 </header>
+<body>
+
 <section class="page-hero">
   <div style="position:relative;z-index:1;">
-    <p class="page-breadcrumb"><a href="../main.html" data-ja="ホーム" data-cn="首頁" data-en="Home">HOME</a> / <span data-ja="採用情報" data-cn="招聘資訊" data-en="Careers">採用情報</span></p>
-    <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;" data-ja="採用情報" data-cn="招聘資訊" data-en="Careers">採用情報</p>
-    <h1 class="hero-headline reveal" id="page-hero-title" style="animation-delay:0.15s;">💼 採用情報</h1>
+    <p class="page-breadcrumb"><a href="../main.html" data-ja="ホーム" data-cn="首頁" data-en="Home">HOME</a> / <span data-ja="活動報告" data-cn="活動報告" data-en="Activity Reports">活動報告</span></p>
+    <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;" data-ja="活動報告" data-cn="活動報告" data-en="Activity Reports">活動報告</p>
+    <h1 class="hero-headline reveal" style="animation-delay:0.15s;">📊 活動報告</h1>
   </div>
 </section>
 
 <section style="background:var(--navy-mid);padding:5rem 5vw;">
   <div style="max-width:1100px;margin:0 auto;">
-    <p class="sec-eyebrow reveal" data-ja="採用情報" data-cn="招聘資訊" data-en="Careers">採用情報</p>
+
+    <!-- 最新ハイライト -->
+    <p class="sec-eyebrow reveal" data-ja="最新ハイライト" data-cn="最新亮點" data-en="Latest Highlights">最新ハイライト</p>
     <h2 class="sec-title reveal" style="margin:1.5rem 0 3rem;"
-        data-ja="ともに、極限の未来を<br>切り拓く仲間を求めています" data-cn="我們尋找共同開創<br>極限未來的夥伴" data-en="We seek partners to pioneer<br>the extreme future together">ともに、極限の未来を<br>切り拓く仲間を求めています</h2>
+        data-ja="2025年度 主要活動サマリー" data-cn="2025年度主要活動摘要" data-en="FY2025 Key Activity Summary">2025年度 主要活動サマリー</h2>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-bottom:4rem;">
-      <div style="background:var(--navy);padding:2.5rem;">
-        <div style="font-size:2rem;margin-bottom:1rem;">🔬</div>
-        <h3 style="font-size:1rem;font-weight:300;color:var(--accent2);margin-bottom:0.8rem;" data-ja="研究・開発職" data-cn="研究開發職" data-en="R&D Roles">研究・開発職</h3>
-        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-ja="生物技術・AI・量子技術・宇宙探査など最先端分野の研究開発を担う人材を募集します。" data-cn="招募負責生物技術、AI、量子技術、宇宙探索等最前沿領域研究開發的人才。" data-en="We recruit talent for R&D in cutting-edge fields including biotech, AI, quantum technology, and space exploration.">生物技術・AI・量子技術・宇宙探査など最先端分野の研究開発を担う人材を募集します。</p>
+    <!-- Stats row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);margin-bottom:4rem;">
+      <div style="background:var(--navy);padding:2rem;text-align:center;">
+        <div style="font-size:2.4rem;font-weight:200;color:var(--accent2);font-family:var(--font-mono);">12</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:0.4rem;" data-ja="進行中プロジェクト" data-cn="進行中項目" data-en="Active Projects">進行中プロジェクト</div>
       </div>
-      <div style="background:var(--navy);padding:2.5rem;">
-        <div style="font-size:2rem;margin-bottom:1rem;">🌐</div>
-        <h3 style="font-size:1rem;font-weight:300;color:var(--accent2);margin-bottom:0.8rem;" data-ja="グローバル営業・企画職" data-cn="全球業務・企劃職" data-en="Global Business & Planning">グローバル営業・企画職</h3>
-        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-ja="アジア・欧米市場での事業展開を担うグローバル人材を募集します。多言語対応歓迎。" data-cn="招募負責亞洲、歐美市場業務拓展的全球化人才，歡迎多語言能力者。" data-en="We recruit global talent for business development in Asian and Western markets. Multilingual applicants welcome.">アジア・欧米市場での事業展開を担うグローバル人材を募集します。多言語対応歓迎。</p>
+      <div style="background:var(--navy);padding:2rem;text-align:center;">
+        <div style="font-size:2.4rem;font-weight:200;color:var(--accent2);font-family:var(--font-mono);">7</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:0.4rem;" data-ja="連携機関・大学" data-cn="合作機構與大學" data-en="Partner Institutions">連携機関・大学</div>
       </div>
-      <div style="background:var(--navy);padding:2.5rem;">
-        <div style="font-size:2rem;margin-bottom:1rem;">❤️</div>
-        <h3 style="font-size:1rem;font-weight:300;color:var(--accent2);margin-bottom:0.8rem;" data-ja="慈善・援助事業職" data-cn="慈善援助事業職" data-en="Charity & Aid Operations">慈善・援助事業職</h3>
-        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-ja="世界各地での教育・医療・環境保護活動を支援するプロジェクトマネージャーを募集します。" data-cn="招募在全球各地支援教育、醫療、環境保護活動的項目管理人員。" data-en="We recruit project managers to support education, medical, and environmental protection activities worldwide.">世界各地での教育・医療・環境保護活動を支援するプロジェクトマネージャーを募集します。</p>
+      <div style="background:var(--navy);padding:2rem;text-align:center;">
+        <div style="font-size:2.4rem;font-weight:200;color:var(--accent2);font-family:var(--font-mono);">23</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:0.4rem;" data-ja="国・地域での活動" data-cn="活動覆蓋國家與地區" data-en="Countries & Regions">国・地域での活動</div>
+      </div>
+      <div style="background:var(--navy);padding:2rem;text-align:center;">
+        <div style="font-size:2.4rem;font-weight:200;color:var(--accent2);font-family:var(--font-mono);">4</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:0.4rem;" data-ja="発行技術論文" data-cn="發表技術論文" data-en="Technical Papers">発行技術論文</div>
       </div>
     </div>
 
-    <div style="background:var(--navy);border:1px solid var(--rule);padding:3rem;margin-bottom:3rem;">
-      <h3 style="font-size:1.1rem;font-weight:300;color:var(--white);margin-bottom:2rem;" data-ja="求める人物像" data-cn="理想人才特質" data-en="Ideal Candidate Profile">求める人物像</h3>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--rule);">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">01</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="人類の進化と発展に貢献したいという強い使命感を持つ方" data-cn="具有強烈使命感，希望為人類進化與發展做出貢獻的人" data-en="Those with a strong sense of mission to contribute to human evolution and development">人類の進化と発展に貢献したいという強い使命感を持つ方</p>
+    <!-- Activity cards grid -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-bottom:4rem;">
+
+      <!-- Card 1 -->
+      <div class="activity-card">
+        <span class="activity-tag" style="background:rgba(0,168,232,0.12);color:var(--accent2);border:1px solid rgba(0,168,232,0.2);"
+              data-ja="エネルギー・AI" data-cn="能源・AI" data-en="Energy · AI">エネルギー・AI</span>
+        <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);margin-bottom:0.6rem;">2025.Q3</p>
+        <h3 style="font-size:1rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;"
+            data-ja="AIによる再生可能エネルギー最適化システムの試験運用を開始" data-cn="開始AI再生能源優化系統試運行" data-en="Pilot operation of AI-based renewable energy optimization system launched">AIによる再生可能エネルギー最適化システムの試験運用を開始</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.8;"
+           data-ja="独自開発の機械学習モデルを活用し、太陽光・風力発電の出力予測精度を従来比30%向上させるシステムの試験運用を東南アジア2か所で開始しました。2026年度の本格展開に向けてデータを収集中です。" data-cn="利用自主開發的機器學習模型，在東南亞兩處開始試運行，太陽能與風力發電輸出預測精度較以往提升30%。目前正在收集數據，以備2026年度全面展開。" data-en="Using our proprietary machine learning models, we launched pilot operations at two Southeast Asian sites, improving solar and wind power output prediction accuracy by 30% over conventional methods. Data is being collected for full deployment in FY2026.">独自開発の機械学習モデルを活用し、太陽光・風力発電の出力予測精度を従来比30%向上させるシステムの試験運用を東南アジア2か所で開始しました。2026年度の本格展開に向けてデータを収集中です。</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="activity-card">
+        <span class="activity-tag" style="background:rgba(80,200,120,0.1);color:rgba(80,200,120,0.85);border:1px solid rgba(80,200,120,0.2);"
+              data-ja="バイオテクノロジー" data-cn="生物技術" data-en="Biotech">バイオテクノロジー</span>
+        <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);margin-bottom:0.6rem;">2025.Q2</p>
+        <h3 style="font-size:1rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;"
+            data-ja="遺伝子編集技術を用いた農作物耐熱化研究の中間報告" data-cn="使用基因編輯技術的農作物耐熱化研究中期報告" data-en="Interim report on heat-resistant crop research using gene-editing technology">遺伝子編集技術を用いた農作物耐熱化研究の中間報告</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.8;"
+           data-ja="3か国の農業研究機関と連携し、気候変動に対応した農作物品種改良プロジェクトの中間報告を発表。特定の主要作物において摂氏5度の高温環境での収量維持に成功しました。" data-cn="與三國農業研究機構合作，發表應對氣候變化的農作物品種改良項目中期報告。特定主要作物在高溫5攝氏度環境下成功維持產量。" data-en="In partnership with agricultural research institutions in three countries, we published an interim report on our climate-adaptive crop improvement project. We successfully maintained yields for specific key crops in environments 5°C above normal.">3か国の農業研究機関と連携し、気候変動に対応した農作物品種改良プロジェクトの中間報告を発表。特定の主要作物において摂氏5度の高温環境での収量維持に成功しました。</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="activity-card">
+        <span class="activity-tag" style="background:rgba(200,150,255,0.1);color:rgba(200,150,255,0.85);border:1px solid rgba(200,150,255,0.2);"
+              data-ja="宇宙探査" data-cn="宇宙探索" data-en="Space Exploration">宇宙探査</span>
+        <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);margin-bottom:0.6rem;">2025.Q2</p>
+        <h3 style="font-size:1rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;"
+            data-ja="小型衛星コンステレーション計画の設計フェーズを完了" data-cn="完成小型衛星星座計劃的設計階段" data-en="Design phase completed for small satellite constellation plan">小型衛星コンステレーション計画の設計フェーズを完了</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.8;"
+           data-ja="地球観測および通信インフラを目的とした12機の小型衛星コンステレーション計画の設計フェーズが完了。打ち上げパートナーとの初期交渉を開始し、2027年の初号機打ち上げを目指しています。" data-cn="針對地球觀測及通訊基礎設施的12顆小型衛星星座計劃設計階段已完成。已開始與發射夥伴的初期談判，目標2027年發射首顆衛星。" data-en="The design phase for a 12-satellite constellation for Earth observation and communications infrastructure has been completed. Initial negotiations with launch partners have begun, targeting the first satellite launch in 2027.">地球観測および通信インフラを目的とした12機の小型衛星コンステレーション計画の設計フェーズが完了。打ち上げパートナーとの初期交渉を開始し、2027年の初号機打ち上げを目指しています。</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="activity-card">
+        <span class="activity-tag" style="background:rgba(255,160,80,0.1);color:rgba(255,160,80,0.85);border:1px solid rgba(255,160,80,0.2);"
+              data-ja="慈善・援助" data-cn="慈善援助" data-en="Charity & Aid">慈善・援助</span>
+        <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);margin-bottom:0.6rem;">2025.Q1–Q3</p>
+        <h3 style="font-size:1rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;"
+            data-ja="東南アジア農村部への教育支援プログラム 第3期実施中" data-cn="東南亞農村教育支援項目第三期進行中" data-en="Phase 3 of rural Southeast Asia education support program underway">東南アジア農村部への教育支援プログラム 第3期実施中</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.8;"
+           data-ja="4か国12か所の農村コミュニティで理科・数学教育支援を継続。現地教員の研修プログラムも併行して実施しており、今期は560名の子供たちと38名の教員が参加しています。" data-cn="持續在4個國家12個農村社區開展理科與數學教育支援。同步實施當地教師培訓計劃，本期共有560名兒童及38名教師參與。" data-en="We continue science and math education support in 12 rural communities across 4 countries. Local teacher training programs are also running concurrently, with 560 children and 38 teachers participating this term.">4か国12か所の農村コミュニティで理科・数学教育支援を継続。現地教員の研修プログラムも併行して実施しており、今期は560名の子供たちと38名の教員が参加しています。</p>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <p class="sec-eyebrow reveal" style="margin-bottom:2rem;" data-ja="活動タイムライン" data-cn="活動時間軸" data-en="Activity Timeline">活動タイムライン</p>
+    <div style="background:var(--navy);border:1px solid var(--rule);padding:3rem;margin-bottom:4rem;">
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <!-- Timeline item -->
+        <div style="display:flex;gap:1.5rem;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div style="padding-bottom:2rem;">
+            <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--accent2);margin-bottom:0.3rem;">2025.09</p>
+            <p style="font-size:0.88rem;color:var(--white);font-weight:300;margin-bottom:0.3rem;" data-ja="AIエネルギー最適化システム試験運用開始（タイ・ベトナム）" data-cn="AI能源優化系統試運行啟動（泰國・越南）" data-en="AI Energy Optimization System pilot launched (Thailand, Vietnam)">AIエネルギー最適化システム試験運用開始（タイ・ベトナム）</p>
+          </div>
         </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--rule);">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">02</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="既存の枠組みにとらわれず、極限まで挑戦し続けられる方" data-cn="不受既有框架束縛，能夠持續挑戰極限的人" data-en="Those who can continue challenging to the extreme without being bound by existing frameworks">既存の枠組みにとらわれず、極限まで挑戦し続けられる方</p>
+        <div style="display:flex;gap:1.5rem;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div class="timeline-dot" style="background:rgba(80,200,120,0.8);"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div style="padding-bottom:2rem;">
+            <p style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(80,200,120,0.8);margin-bottom:0.3rem;">2025.06</p>
+            <p style="font-size:0.88rem;color:var(--white);font-weight:300;margin-bottom:0.3rem;" data-ja="農作物耐熱化研究中間報告 発表" data-cn="農作物耐熱化研究中期報告發表" data-en="Interim report on heat-resistant crop research published">農作物耐熱化研究中間報告 発表</p>
+          </div>
         </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--rule);">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">03</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="多様な文化・価値観を尊重し、国際的な環境で活躍できる方" data-cn="尊重多元文化與價值觀，能在國際環境中活躍的人" data-en="Those who respect diverse cultures and values and can thrive in international environments">多様な文化・価値観を尊重し、国際的な環境で活躍できる方</p>
+        <div style="display:flex;gap:1.5rem;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div class="timeline-dot" style="background:rgba(200,150,255,0.8);"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div style="padding-bottom:2rem;">
+            <p style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(200,150,255,0.8);margin-bottom:0.3rem;">2025.05</p>
+            <p style="font-size:0.88rem;color:var(--white);font-weight:300;margin-bottom:0.3rem;" data-ja="小型衛星コンステレーション設計フェーズ完了・打ち上げパートナー交渉開始" data-cn="小型衛星星座設計階段完成・開始發射夥伴談判" data-en="Satellite constellation design phase complete, launch partner negotiations begin">小型衛星コンステレーション設計フェーズ完了・打ち上げパートナー交渉開始</p>
+          </div>
         </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">04</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="利他的な精神で、チームと社会全体の利益を優先できる方" data-cn="具有利他精神，能夠優先考慮團隊與社會整體利益的人" data-en="Those with an altruistic spirit who can prioritize the benefit of the team and society as a whole">利他的な精神で、チームと社会全体の利益を優先できる方</p>
+        <div style="display:flex;gap:1.5rem;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div class="timeline-dot" style="background:rgba(255,160,80,0.8);"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div style="padding-bottom:2rem;">
+            <p style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(255,160,80,0.8);margin-bottom:0.3rem;">2025.04</p>
+            <p style="font-size:0.88rem;color:var(--white);font-weight:300;margin-bottom:0.3rem;" data-ja="東南アジア教育支援プログラム 第3期開始（4か国12コミュニティ）" data-cn="東南亞教育支援計劃第三期開始（4國12社區）" data-en="Phase 3 education support program starts (4 countries, 12 communities)">東南アジア教育支援プログラム 第3期開始（4か国12コミュニティ）</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:1.5rem;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line" style="opacity:0;"></div>
+          </div>
+          <div>
+            <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--accent2);margin-bottom:0.3rem;">2025.01</p>
+            <p style="font-size:0.88rem;color:var(--white);font-weight:300;margin-bottom:0.3rem;" data-ja="2025年度事業計画の策定・公表" data-cn="2025年度業務計劃制定與公布" data-en="FY2025 business plan formulated and announced">2025年度事業計画の策定・公表</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div style="background:linear-gradient(135deg,#0d2530,#071820);border:1px solid rgba(0,168,232,0.3);padding:3rem;text-align:center;">
-      <p style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--accent2);margin-bottom:1rem;" data-ja="応募方法" data-cn="應徵方式" data-en="How to Apply">応募方法</p>
-      <p style="font-size:1rem;color:var(--white);font-weight:300;margin-bottom:0.8rem;" data-ja="現在、各ポジションの募集準備を進めています。" data-cn="目前正在籌備各職位的招募工作。" data-en="We are currently preparing recruitment for each position.">現在、各ポジションの募集準備を進めています。</p>
-      <p style="font-size:0.88rem;color:var(--muted);margin-bottom:2rem;" data-ja="ご興味のある方は、まずお気軽にお問い合わせください。" data-cn="有興趣者請先隨時與我們聯絡。" data-en="If you are interested, please feel free to contact us first.">ご興味のある方は、まずお気軽にお問い合わせください。</p>
-      <a href="../main.html#contact" class="btn-primary" data-ja="お問い合わせはこちら" data-cn="點此聯絡我們" data-en="Contact Us Here">お問い合わせはこちら</a>
+    <!-- Annual report CTA -->
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:2rem;align-items:stretch;">
+      <div style="background:linear-gradient(135deg,#0d2530,#071820);border:1px solid rgba(0,168,232,0.3);padding:3rem;">
+        <p style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--accent2);margin-bottom:1rem;" data-ja="年次報告書について" data-cn="關於年度報告" data-en="About Annual Reports">年次報告書について</p>
+        <p style="font-size:1rem;color:var(--white);font-weight:300;margin-bottom:0.8rem;" data-ja="詳細な年次報告書は会員・支援者の皆様に配布しております。" data-cn="詳細年度報告書分發給所有會員與支持者。" data-en="Detailed annual reports are distributed to all members and supporters.">詳細な年次報告書は会員・支援者の皆様に配布しております。</p>
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.8;" data-ja="財務状況・各事業の進捗・慈善活動の実績などを包括的にまとめた報告書は、会員登録後にご覧いただけます。一般公開版の要約もお問い合わせにより入手可能です。" data-cn="包含財務狀況、各業務進展及慈善活動成果的綜合報告書，會員登錄後即可閱覽。如有需要，亦可透過聯絡我們取得公開摘要版本。" data-en="A comprehensive report covering financial status, business progress, and charity results is available after member registration. A public summary version is also available upon inquiry.">財務状況・各事業の進捗・慈善活動の実績などを包括的にまとめた報告書は、会員登録後にご覧いただけます。一般公開版の要約もお問い合わせにより入手可能です。</p>
+        <a href="membership.html" class="btn-primary" data-ja="会員登録はこちら" data-cn="立即加入會員" data-en="Register as Member">会員登録はこちら</a>
+      </div>
+      <div style="background:var(--navy);border:1px solid var(--rule);padding:2.5rem;display:flex;flex-direction:column;justify-content:center;text-align:center;">
+        <div style="font-size:3rem;margin-bottom:1rem;">📋</div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;" data-ja="プレスリリース・メディア向け資料はお問い合わせより取得可能です。" data-cn="媒體新聞稿及相關資料可透過聯絡我們取得。" data-en="Press releases and media materials are available upon inquiry.">プレスリリース・メディア向け資料はお問い合わせより取得可能です。</p>
+        <a href="../main.html#contact" style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;color:var(--accent2);text-decoration:none;"
+           data-ja="お問い合わせ →" data-cn="聯絡我們 →" data-en="Contact Us →">お問い合わせ →</a>
+      </div>
     </div>
+
   </div>
 </section>
+
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
@@ -136,8 +254,8 @@
       <div class="footer-links">
         <a href="charity.html" data-ja="援助プロジェクト" data-cn="援助專案" data-en="Aid Projects">援助プロジェクト</a>
         <a href="charity.html#donate" data-ja="寄付・捐款" data-cn="捐款方式" data-en="Donate">寄付・捐款</a>
-        <a href="membership.html" data-ja="会員・支援プラン" data-cn="會員計劃" data-en="Membership Plans">会員・支援プラン</a>
-        <a href="activities.html" data-ja="活動報告" data-cn="活動報告" data-en="Activity Reports">活動報告</a>
+        <a href="charity.html#membership" data-ja="会員・支援プラン" data-cn="會員計劃" data-en="Membership Plans">会員・支援プラン</a>
+        <a href="charity.html#transparency" data-ja="活動報告" data-cn="活動報告" data-en="Activity Reports">活動報告</a>
       </div>
     </div>
     <div>

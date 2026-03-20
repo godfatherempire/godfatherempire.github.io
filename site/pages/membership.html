@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UECHT GROUP — 採用情報</title>
+<title>UECHT GROUP — 会員・支援プラン</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Sans+SC:wght@200;300;400&family=Noto+Serif+SC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/main.css">
@@ -15,6 +15,21 @@
 .page-breadcrumb a { color:var(--accent2); text-decoration:none; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 .reveal { opacity:0; animation:fadeUp 0.7s ease forwards; }
+</style>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<style>
+.page-hero { min-height:45vh; display:flex; flex-direction:column; justify-content:center; padding:5rem 5vw 4rem; position:relative; overflow:hidden; background:linear-gradient(160deg,#071820 0%,#0d2530 60%,#0a1e2a 100%); }
+.page-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px); background-size:80px 80px; mask-image:radial-gradient(ellipse at 30% 60%,black 20%,transparent 70%); }
+.page-hero::after { content:''; position:absolute; right:0; top:0; bottom:0; width:40%; background:radial-gradient(ellipse at right center,#0a3a6e22 0%,transparent 70%); }
+.page-breadcrumb { font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.2em; color:var(--muted); margin-bottom:1.5rem; }
+.page-breadcrumb a { color:var(--accent2); text-decoration:none; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.reveal { opacity:0; animation:fadeUp 0.7s ease forwards; }
+.plan-badge { display:inline-block; font-family:var(--font-mono); font-size:0.55rem; letter-spacing:0.15em; padding:0.25rem 0.8rem; margin-bottom:0.8rem; border-radius:2px; }
+.plan-price { font-size:2.2rem; font-weight:200; color:var(--white); margin:0.5rem 0 1rem; }
+.plan-price span { font-size:0.8rem; color:var(--muted); font-weight:300; }
+.plan-feature { display:flex; align-items:flex-start; gap:0.7rem; padding:0.65rem 0; border-bottom:1px solid var(--rule); font-size:0.84rem; color:var(--silver); line-height:1.7; }
+.plan-feature:last-child { border-bottom:none; }
 </style>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
@@ -49,68 +64,146 @@
     </div>
   </nav>
 </header>
+<body>
+
 <section class="page-hero">
   <div style="position:relative;z-index:1;">
-    <p class="page-breadcrumb"><a href="../main.html" data-ja="ホーム" data-cn="首頁" data-en="Home">HOME</a> / <span data-ja="採用情報" data-cn="招聘資訊" data-en="Careers">採用情報</span></p>
-    <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;" data-ja="採用情報" data-cn="招聘資訊" data-en="Careers">採用情報</p>
-    <h1 class="hero-headline reveal" id="page-hero-title" style="animation-delay:0.15s;">💼 採用情報</h1>
+    <p class="page-breadcrumb"><a href="../main.html" data-ja="ホーム" data-cn="首頁" data-en="Home">HOME</a> / <span data-ja="会員・支援プラン" data-cn="會員與支援計劃" data-en="Membership & Support Plans">会員・支援プラン</span></p>
+    <p class="sec-eyebrow reveal" style="margin-bottom:1.5rem;" data-ja="会員・支援プラン" data-cn="會員與支援計劃" data-en="Membership & Support Plans">会員・支援プラン</p>
+    <h1 class="hero-headline reveal" style="animation-delay:0.15s;">🌐 会員・支援プラン</h1>
   </div>
 </section>
 
 <section style="background:var(--navy-mid);padding:5rem 5vw;">
   <div style="max-width:1100px;margin:0 auto;">
-    <p class="sec-eyebrow reveal" data-ja="採用情報" data-cn="招聘資訊" data-en="Careers">採用情報</p>
-    <h2 class="sec-title reveal" style="margin:1.5rem 0 3rem;"
-        data-ja="ともに、極限の未来を<br>切り拓く仲間を求めています" data-cn="我們尋找共同開創<br>極限未來的夥伴" data-en="We seek partners to pioneer<br>the extreme future together">ともに、極限の未来を<br>切り拓く仲間を求めています</h2>
+    <p class="sec-eyebrow reveal" data-ja="ご支援のお願い" data-cn="支援邀請" data-en="Support Us">ご支援のお願い</p>
+    <h2 class="sec-title reveal" style="margin:1.5rem 0 1rem;"
+        data-ja="人類の未来を共に創る<br>パートナーシップ" data-cn="共同創造人類未來的<br>夥伴關係" data-en="A Partnership to Create<br>Humanity's Future Together">人類の未来を共に創る<br>パートナーシップ</h2>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.9;max-width:700px;margin-bottom:4rem;" data-ja="UECHTの活動は、会員の皆様・支援者の皆様のご協力によって成り立っています。エネルギー・AI・バイオテクノロジー・宇宙探査など、人類の未来を拓く事業への参加をお待ちしております。" data-cn="UECHT的活動有賴於會員與支持者的協力。我們期待您加入能源、AI、生物技術、宇宙探索等開創人類未來的事業。" data-en="UECHT's activities are made possible through the support of our members and donors. We welcome your participation in ventures that open up humanity's future in energy, AI, biotech, and space exploration.">UECHTの活動は、会員の皆様・支援者の皆様のご協力によって成り立っています。エネルギー・AI・バイオテクノロジー・宇宙探査など、人類の未来を拓く事業への参加をお待ちしております。</p>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-bottom:4rem;">
-      <div style="background:var(--navy);padding:2.5rem;">
-        <div style="font-size:2rem;margin-bottom:1rem;">🔬</div>
-        <h3 style="font-size:1rem;font-weight:300;color:var(--accent2);margin-bottom:0.8rem;" data-ja="研究・開発職" data-cn="研究開發職" data-en="R&D Roles">研究・開発職</h3>
-        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-ja="生物技術・AI・量子技術・宇宙探査など最先端分野の研究開発を担う人材を募集します。" data-cn="招募負責生物技術、AI、量子技術、宇宙探索等最前沿領域研究開發的人才。" data-en="We recruit talent for R&D in cutting-edge fields including biotech, AI, quantum technology, and space exploration.">生物技術・AI・量子技術・宇宙探査など最先端分野の研究開発を担う人材を募集します。</p>
+    <!-- Plans Grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-bottom:5rem;">
+
+      <!-- Plan 1: サポーター -->
+      <div style="background:var(--navy);padding:2.5rem;display:flex;flex-direction:column;">
+        <div>
+          <span class="plan-badge" style="background:rgba(0,168,232,0.12);color:var(--accent2);border:1px solid rgba(0,168,232,0.25);"
+                data-ja="サポーター" data-cn="支持者" data-en="SUPPORTER">サポーター</span>
+          <div class="plan-price">¥3,000<span data-ja="/月" data-cn="/月" data-en="/mo">/月</span></div>
+          <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.7;"
+             data-ja="UECHTの活動を応援したい個人の方向けの入門プランです。" data-cn="適合希望支持UECHT活動之個人的入門計劃。" data-en="An entry-level plan for individuals who want to support UECHT's activities.">UECHTの活動を応援したい個人の方向けの入門プランです。</p>
+        </div>
+        <div style="flex:1;">
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="会員証（デジタル）の発行" data-cn="發行數位會員證" data-en="Digital membership card issuance">会員証（デジタル）の発行</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="月次活動報告レポートの受信" data-cn="接收每月活動報告" data-en="Monthly activity report delivery">月次活動報告レポートの受信</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="年1回の支援者総会への参加権" data-cn="每年一次支持者大會參加資格" data-en="Annual supporter assembly attendance">年1回の支援者総会への参加権</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="会員専用ニュースレターの配信" data-cn="會員專屬電子報配送" data-en="Members-only newsletter">会員専用ニュースレターの配信</span></div>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="../main.html#contact" style="display:block;text-align:center;padding:0.8rem;border:1px solid var(--accent2);color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.1em;text-decoration:none;transition:all 0.3s;" onmouseover="this.style.background='var(--accent2)';this.style.color='var(--navy)'" onmouseout="this.style.background='transparent';this.style.color='var(--accent2)'"
+              data-ja="お申し込み" data-cn="立即申請" data-en="Apply Now">お申し込み</a>
+        </div>
       </div>
-      <div style="background:var(--navy);padding:2.5rem;">
-        <div style="font-size:2rem;margin-bottom:1rem;">🌐</div>
-        <h3 style="font-size:1rem;font-weight:300;color:var(--accent2);margin-bottom:0.8rem;" data-ja="グローバル営業・企画職" data-cn="全球業務・企劃職" data-en="Global Business & Planning">グローバル営業・企画職</h3>
-        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-ja="アジア・欧米市場での事業展開を担うグローバル人材を募集します。多言語対応歓迎。" data-cn="招募負責亞洲、歐美市場業務拓展的全球化人才，歡迎多語言能力者。" data-en="We recruit global talent for business development in Asian and Western markets. Multilingual applicants welcome.">アジア・欧米市場での事業展開を担うグローバル人材を募集します。多言語対応歓迎。</p>
+
+      <!-- Plan 2: コーポレート (Featured) -->
+      <div style="background:linear-gradient(160deg,#0a2a40,#0d1f30);padding:2.5rem;display:flex;flex-direction:column;position:relative;border:1px solid rgba(0,168,232,0.4);">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--accent2);color:var(--navy);font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.12em;padding:0.25rem 1rem;"
+             data-ja="おすすめ" data-cn="推薦" data-en="RECOMMENDED">おすすめ</div>
+        <div>
+          <span class="plan-badge" style="background:rgba(0,168,232,0.18);color:var(--accent2);border:1px solid rgba(0,168,232,0.4);"
+                data-ja="コーポレート" data-cn="企業會員" data-en="CORPORATE">コーポレート</span>
+          <div class="plan-price">¥50,000<span data-ja="/月" data-cn="/月" data-en="/mo">/月</span></div>
+          <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.7;"
+             data-ja="UECHTとの事業連携や共同研究を検討している企業向けのプランです。" data-cn="適合考慮與UECHT進行業務合作或共同研究之企業的計劃。" data-en="A plan for companies considering business collaboration or joint research with UECHT.">UECHTとの事業連携や共同研究を検討している企業向けのプランです。</p>
+        </div>
+        <div style="flex:1;">
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="サポータープランの全特典" data-cn="包含支持者計劃全部福利" data-en="All Supporter plan benefits">サポータープランの全特典</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="企業ロゴのウェブサイト掲載" data-cn="企業標誌刊登於網站" data-en="Company logo on website">企業ロゴのウェブサイト掲載</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="四半期ごとの事業ブリーフィング" data-cn="每季業務簡報" data-en="Quarterly business briefings">四半期ごとの事業ブリーフィング</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="共同研究・開発の優先協議権" data-cn="聯合研究開發優先協議權" data-en="Priority joint R&D discussions">共同研究・開発の優先協議権</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="年2回の経営層との意見交換会" data-cn="每年兩次與管理層交流會議" data-en="Biannual executive exchanges">年2回の経営層との意見交換会</span></div>
+          <div class="plan-feature"><span style="color:var(--accent2);">✓</span><span data-ja="専属コンタクトパーソンの設置" data-cn="設置專屬聯絡窗口" data-en="Dedicated contact person">専属コンタクトパーソンの設置</span></div>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="../main.html#contact" style="display:block;text-align:center;padding:0.8rem;background:var(--accent2);color:var(--navy);font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.1em;text-decoration:none;font-weight:500;transition:all 0.3s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'"
+              data-ja="お申し込み" data-cn="立即申請" data-en="Apply Now">お申し込み</a>
+        </div>
       </div>
-      <div style="background:var(--navy);padding:2.5rem;">
-        <div style="font-size:2rem;margin-bottom:1rem;">❤️</div>
-        <h3 style="font-size:1rem;font-weight:300;color:var(--accent2);margin-bottom:0.8rem;" data-ja="慈善・援助事業職" data-cn="慈善援助事業職" data-en="Charity & Aid Operations">慈善・援助事業職</h3>
-        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-ja="世界各地での教育・医療・環境保護活動を支援するプロジェクトマネージャーを募集します。" data-cn="招募在全球各地支援教育、醫療、環境保護活動的項目管理人員。" data-en="We recruit project managers to support education, medical, and environmental protection activities worldwide.">世界各地での教育・医療・環境保護活動を支援するプロジェクトマネージャーを募集します。</p>
+
+      <!-- Plan 3: ストラテジック -->
+      <div style="background:var(--navy);padding:2.5rem;display:flex;flex-direction:column;">
+        <div>
+          <span class="plan-badge" style="background:rgba(255,200,0,0.1);color:rgba(255,200,0,0.85);border:1px solid rgba(255,200,0,0.25);"
+                data-ja="ストラテジック" data-cn="戰略夥伴" data-en="STRATEGIC">ストラテジック</span>
+          <div class="plan-price" style="font-size:1.4rem;padding-top:0.3rem;" data-ja="要相談" data-cn="請洽詢" data-en="By Inquiry">要相談</div>
+          <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.7;"
+             data-ja="長期的な戦略パートナーシップを築きたい機関・財団・政府機関向けの最上位プランです。" data-cn="適合希望建立長期戰略夥伴關係之機構、基金會及政府機關的最高級計劃。" data-en="The premium plan for institutions, foundations, and government agencies seeking long-term strategic partnerships.">長期的な戦略パートナーシップを築きたい機関・財団・政府機関向けの最上位プランです。</p>
+        </div>
+        <div style="flex:1;">
+          <div class="plan-feature"><span style="color:rgba(255,200,0,0.85);">✓</span><span data-ja="コーポレートプランの全特典" data-cn="包含企業計劃全部福利" data-en="All Corporate plan benefits">コーポレートプランの全特典</span></div>
+          <div class="plan-feature"><span style="color:rgba(255,200,0,0.85);">✓</span><span data-ja="共同出資・共同事業の優先権" data-cn="共同出資與共同事業優先權" data-en="Joint investment priority rights">共同出資・共同事業の優先権</span></div>
+          <div class="plan-feature"><span style="color:rgba(255,200,0,0.85);">✓</span><span data-ja="技術移転・ライセンス交渉の優先枠" data-cn="技術轉讓與授權談判優先席位" data-en="Priority technology transfer negotiations">技術移転・ライセンス交渉の優先枠</span></div>
+          <div class="plan-feature"><span style="color:rgba(255,200,0,0.85);">✓</span><span data-ja="取締役会レベルの定期対話" data-cn="董事會層級定期對話" data-en="Board-level regular dialogue">取締役会レベルの定期対話</span></div>
+          <div class="plan-feature"><span style="color:rgba(255,200,0,0.85);">✓</span><span data-ja="カスタム契約・条件の協議" data-cn="客製化合約與條件協議" data-en="Custom contract negotiations">カスタム契約・条件の協議</span></div>
+          <div class="plan-feature"><span style="color:rgba(255,200,0,0.85);">✓</span><span data-ja="独自の研究プロジェクト立案権" data-cn="獨立研究項目提案權" data-en="Independent research project proposals">独自の研究プロジェクト立案権</span></div>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="../main.html#contact" style="display:block;text-align:center;padding:0.8rem;border:1px solid rgba(255,200,0,0.4);color:rgba(255,200,0,0.85);font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.1em;text-decoration:none;transition:all 0.3s;" onmouseover="this.style.background='rgba(255,200,0,0.1)'" onmouseout="this.style.background='transparent'"
+              data-ja="お問い合わせ" data-cn="請洽詢" data-en="Inquire">お問い合わせ</a>
+        </div>
       </div>
     </div>
 
-    <div style="background:var(--navy);border:1px solid var(--rule);padding:3rem;margin-bottom:3rem;">
-      <h3 style="font-size:1.1rem;font-weight:300;color:var(--white);margin-bottom:2rem;" data-ja="求める人物像" data-cn="理想人才特質" data-en="Ideal Candidate Profile">求める人物像</h3>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--rule);">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">01</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="人類の進化と発展に貢献したいという強い使命感を持つ方" data-cn="具有強烈使命感，希望為人類進化與發展做出貢獻的人" data-en="Those with a strong sense of mission to contribute to human evolution and development">人類の進化と発展に貢献したいという強い使命感を持つ方</p>
+    <!-- Info section -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:4rem;">
+      <div style="background:var(--navy);border:1px solid var(--rule);padding:2.5rem;">
+        <h3 style="font-size:1rem;font-weight:300;color:var(--white);margin-bottom:1.5rem;"
+            data-ja="寄附・一時支援について" data-cn="關於捐款與一次性支援" data-en="About Donations & One-Time Support">寄附・一時支援について</h3>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;"
+           data-ja="月額プランのほか、単発の寄附・プロジェクト支援も受け付けております。特定の研究プロジェクトや慈善活動への支援を希望される方は、お問い合わせフォームよりご連絡ください。" data-cn="除月費計劃外，我們也接受一次性捐款與項目支援。如希望支持特定研究項目或慈善活動，請透過聯絡表單與我們聯繫。" data-en="In addition to monthly plans, we also accept one-time donations and project support. If you wish to support a specific research project or charitable activity, please contact us via the inquiry form.">月額プランのほか、単発の寄附・プロジェクト支援も受け付けております。特定の研究プロジェクトや慈善活動への支援を希望される方は、お問い合わせフォームよりご連絡ください。</p>
+        <a href="charity.html" style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;color:var(--accent2);text-decoration:none;"
+           data-ja="慈善・援助ページを見る →" data-cn="查看慈善援助頁面 →" data-en="View Charity & Aid Page →">慈善・援助ページを見る →</a>
+      </div>
+      <div style="background:var(--navy);border:1px solid var(--rule);padding:2.5rem;">
+        <h3 style="font-size:1rem;font-weight:300;color:var(--white);margin-bottom:1.5rem;"
+            data-ja="会員特典・福利一覧" data-cn="會員福利列表" data-en="Member Benefits Overview">会員特典・福利一覧</h3>
+        <div style="display:flex;flex-direction:column;gap:0.8rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:0.6rem;border-bottom:1px solid var(--rule);">
+            <span style="font-size:0.8rem;color:var(--silver);" data-ja="デジタル会員証" data-cn="數位會員證" data-en="Digital Card">デジタル会員証</span>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent2);">S / C / ST</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:0.6rem;border-bottom:1px solid var(--rule);">
+            <span style="font-size:0.8rem;color:var(--silver);" data-ja="月次レポート" data-cn="月度報告" data-en="Monthly Report">月次レポート</span>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent2);">S / C / ST</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:0.6rem;border-bottom:1px solid var(--rule);">
+            <span style="font-size:0.8rem;color:var(--silver);" data-ja="企業ロゴ掲載" data-cn="企業標誌掲載" data-en="Logo Placement">企業ロゴ掲載</span>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent2);">C / ST</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:0.6rem;border-bottom:1px solid var(--rule);">
+            <span style="font-size:0.8rem;color:var(--silver);" data-ja="技術ブリーフィング" data-cn="技術簡報" data-en="Tech Briefings">技術ブリーフィング</span>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent2);">C / ST</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.8rem;color:var(--silver);" data-ja="共同事業優先権" data-cn="共同事業優先權" data-en="Joint Business Priority">共同事業優先権</span>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:rgba(255,200,0,0.8);">ST only</span>
+          </div>
         </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--rule);">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">02</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="既存の枠組みにとらわれず、極限まで挑戦し続けられる方" data-cn="不受既有框架束縛，能夠持續挑戰極限的人" data-en="Those who can continue challenging to the extreme without being bound by existing frameworks">既存の枠組みにとらわれず、極限まで挑戦し続けられる方</p>
-        </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid var(--rule);">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">03</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="多様な文化・価値観を尊重し、国際的な環境で活躍できる方" data-cn="尊重多元文化與價值觀，能在國際環境中活躍的人" data-en="Those who respect diverse cultures and values and can thrive in international environments">多様な文化・価値観を尊重し、国際的な環境で活躍できる方</p>
-        </div>
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <span style="color:var(--accent2);font-family:var(--font-mono);font-size:0.7rem;min-width:24px;">04</span>
-          <p style="font-size:0.9rem;color:var(--silver);line-height:1.8;" data-ja="利他的な精神で、チームと社会全体の利益を優先できる方" data-cn="具有利他精神，能夠優先考慮團隊與社會整體利益的人" data-en="Those with an altruistic spirit who can prioritize the benefit of the team and society as a whole">利他的な精神で、チームと社会全体の利益を優先できる方</p>
-        </div>
+        <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);margin-top:1rem;" data-ja="S=サポーター, C=コーポレート, ST=ストラテジック" data-cn="S=支持者, C=企業, ST=戰略夥伴" data-en="S=Supporter, C=Corporate, ST=Strategic">S=サポーター, C=コーポレート, ST=ストラテジック</p>
       </div>
     </div>
 
+    <!-- CTA -->
     <div style="background:linear-gradient(135deg,#0d2530,#071820);border:1px solid rgba(0,168,232,0.3);padding:3rem;text-align:center;">
-      <p style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--accent2);margin-bottom:1rem;" data-ja="応募方法" data-cn="應徵方式" data-en="How to Apply">応募方法</p>
-      <p style="font-size:1rem;color:var(--white);font-weight:300;margin-bottom:0.8rem;" data-ja="現在、各ポジションの募集準備を進めています。" data-cn="目前正在籌備各職位的招募工作。" data-en="We are currently preparing recruitment for each position.">現在、各ポジションの募集準備を進めています。</p>
-      <p style="font-size:0.88rem;color:var(--muted);margin-bottom:2rem;" data-ja="ご興味のある方は、まずお気軽にお問い合わせください。" data-cn="有興趣者請先隨時與我們聯絡。" data-en="If you are interested, please feel free to contact us first.">ご興味のある方は、まずお気軽にお問い合わせください。</p>
+      <p style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--accent2);margin-bottom:1rem;" data-ja="お申し込み・お問い合わせ" data-cn="申請與洽詢" data-en="Apply or Inquire">お申し込み・お問い合わせ</p>
+      <p style="font-size:1rem;color:var(--white);font-weight:300;margin-bottom:0.8rem;" data-ja="ご質問やカスタムプランのご相談はお気軽に。" data-cn="歡迎隨時詢問或洽談客製化計劃。" data-en="Feel free to ask questions or discuss custom plans.">ご質問やカスタムプランのご相談はお気軽に。</p>
+      <p style="font-size:0.88rem;color:var(--muted);margin-bottom:2rem;" data-ja="担当者が迅速にご対応いたします。" data-cn="我們的負責人將迅速回應您的需求。" data-en="Our team will respond promptly.">担当者が迅速にご対応いたします。</p>
       <a href="../main.html#contact" class="btn-primary" data-ja="お問い合わせはこちら" data-cn="點此聯絡我們" data-en="Contact Us Here">お問い合わせはこちら</a>
     </div>
   </div>
 </section>
+
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
@@ -136,8 +229,8 @@
       <div class="footer-links">
         <a href="charity.html" data-ja="援助プロジェクト" data-cn="援助專案" data-en="Aid Projects">援助プロジェクト</a>
         <a href="charity.html#donate" data-ja="寄付・捐款" data-cn="捐款方式" data-en="Donate">寄付・捐款</a>
-        <a href="membership.html" data-ja="会員・支援プラン" data-cn="會員計劃" data-en="Membership Plans">会員・支援プラン</a>
-        <a href="activities.html" data-ja="活動報告" data-cn="活動報告" data-en="Activity Reports">活動報告</a>
+        <a href="charity.html#membership" data-ja="会員・支援プラン" data-cn="會員計劃" data-en="Membership Plans">会員・支援プラン</a>
+        <a href="charity.html#transparency" data-ja="活動報告" data-cn="活動報告" data-en="Activity Reports">活動報告</a>
       </div>
     </div>
     <div>
