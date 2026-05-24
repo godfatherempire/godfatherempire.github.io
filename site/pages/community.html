@@ -552,10 +552,15 @@ function submitLinghengApp() {
     var msg2 = lang === 'cn' ? '請勾選誓言以繼續。' : lang === 'en' ? 'Please agree to the pledge to continue.' : '誓約へのチェックが必要です。';
     alert(msg2); return;
   }
-  var subject = lang === 'cn' ? '靈衡社入會申請 - ' + name : lang === 'en' ? 'Spirit Balance Alliance Application - ' + name : '霊衡社入会申請 - ' + name;
   var skills = document.getElementById('lh-skills').value.trim();
-  var body = 'Name: ' + name + '\nEmail: ' + email + '\n\nSituation:\n' + situation + (skills ? '\n\nSkills:\n' + skills : '') + '\n\nPledge: Agreed';
-  window.location.href = 'mailto:info@uecht.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  var subject = lang === 'cn' ? '靈衡社入會申請 - ' + name : lang === 'en' ? 'Spirit Balance Alliance Application - ' + name : '霊衡社入会申請 - ' + name;
+  var body = '【霊衡社入会申請】\n\n' +
+    'お名前 / Name: ' + name + '\n' +
+    'メール / Email: ' + email + '\n\n' +
+    '現在の状況 / Situation:\n' + situation +
+    (skills ? '\n\nスキル / Skills:\n' + skills : '') +
+    '\n\n誓約 / Pledge: 同意済み / Agreed';
+  window.location.href = 'mailto:uecht.group@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   var sEl = document.getElementById('lh-success');
   sEl.style.display = 'block';
   var pEl = sEl.querySelector('p');
