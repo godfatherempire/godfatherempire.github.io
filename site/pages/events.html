@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UECHT GROUP — イベント・説明会</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Sans+SC:wght@200;300;400&family=Noto+Serif+SC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Sans+SC:wght@200;300;400&family=Noto+Serif+SC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/main.css">
 <style>
 .page-hero { min-height:45vh; display:flex; flex-direction:column; justify-content:center; padding:5rem 5vw 4rem; position:relative; overflow:hidden; background:linear-gradient(160deg,#071820 0%,#0d2530 60%,#0a1e2a 100%); }
@@ -106,7 +106,7 @@
         <div style="display:flex;gap:1.5rem;font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);">
           <span>🕐 14:00–15:30 JST</span>
           <span>🌐 Zoom</span>
-          <span>🗣️ 日本語 / 中文 / English</span>
+          <span data-ja="🗣️ 日本語 / 中文 / English" data-cn="🗣️ 日語 / 中文 / English" data-en="🗣️ Japanese / Chinese / English">🗣️ 日本語 / 中文 / English</span>
         </div>
       </div>
       <div>
@@ -129,7 +129,7 @@
         <div style="display:flex;gap:1.5rem;font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);">
           <span>🕐 10:00–11:30 JST</span>
           <span>🌐 Zoom</span>
-          <span>🗣️ 日本語 / English</span>
+          <span data-ja="🗣️ 日本語 / English" data-cn="🗣️ 日語 / English" data-en="🗣️ Japanese / English">🗣️ 日本語 / English</span>
         </div>
       </div>
       <div>
@@ -151,8 +151,8 @@
            data-ja="東京会場（およびZoomオンライン）で開催する年次交流会。会員の皆様と経営陣が直接対話できる貴重な機会です。" data-cn="於東京會場（及Zoom線上）舉辦的年度交流會。會員與管理層直接交流的珍貴機會。" data-en="Annual networking in Tokyo venue (and via Zoom). Precious opportunity for members to interact directly with management.">東京会場（およびZoomオンライン）で開催する年次交流会。会員の皆様と経営陣が直接対話できる貴重な機会です。</p>
         <div style="display:flex;gap:1.5rem;font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);">
           <span>🕐 15:00–18:00 JST</span>
-          <span>📍 東京・オンライン</span>
-          <span>🎟️ 会員限定</span>
+          <span data-ja="📍 東京・オンライン" data-cn="📍 東京・線上" data-en="📍 Tokyo & Online">📍 東京・オンライン</span>
+          <span data-ja="🎟️ 会員限定" data-cn="🎟️ 會員限定" data-en="🎟️ Members Only">🎟️ 会員限定</span>
         </div>
       </div>
       <div>
@@ -175,7 +175,7 @@
         <div style="display:flex;gap:1.5rem;font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);">
           <span>🕐 13:00–14:30 JST</span>
           <span>🌐 Zoom</span>
-          <span>🗣️ 日本語</span>
+          <span data-ja="🗣️ 日本語" data-cn="🗣️ 日語" data-en="🗣️ Japanese">🗣️ 日本語</span>
         </div>
       </div>
       <div>
@@ -300,10 +300,10 @@
 <div id="donation-success-overlay" style="display:none; position:fixed; inset:0; background:rgba(7,24,32,0.95); z-index:999; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding:2rem;">
   <div style="max-width:480px;">
     <div style="font-size:4rem; margin-bottom:1.5rem;">🙏</div>
-    <h2 style="font-family:var(--font-en); font-size:2rem; color:var(--white); margin-bottom:1rem;">ご寄付ありがとうございます</h2>
-    <p style="color:var(--silver); margin-bottom:0.5rem;">寄付金額: <strong class="success-amount" style="color:var(--accent2); font-family:var(--font-mono);"></strong></p>
-    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:2rem;">領収書をご登録のメールアドレスにお送りします。</p>
-    <button onclick="closeDonationSuccess()" style="padding:0.8rem 2.5rem; background:var(--accent); color:white; border:none; cursor:pointer; font-family:var(--font-mono); letter-spacing:0.1em;">閉じる</button>
+    <h2 style="font-family:var(--font-en); font-size:2rem; color:var(--white); margin-bottom:1rem;" data-ja="ご寄付ありがとうございます" data-cn="感謝您的捐贈" data-en="Thank You for Your Donation">ご寄付ありがとうございます</h2>
+    <p style="color:var(--silver); margin-bottom:0.5rem;"><span data-ja="寄付金額:" data-cn="捐贈金額:" data-en="Donation Amount:">寄付金額:</span> <strong class="success-amount" style="color:var(--accent2); font-family:var(--font-mono);"></strong></p>
+    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:2rem;" data-ja="領収書をご登録のメールアドレスにお送りします。" data-cn="收據將發送至您登記的電子郵件地址。" data-en="A receipt will be sent to your registered email address.">領収書をご登録のメールアドレスにお送りします。</p>
+    <button onclick="closeDonationSuccess()" style="padding:0.8rem 2.5rem; background:var(--accent); color:white; border:none; cursor:pointer; font-family:var(--font-mono); letter-spacing:0.1em;" data-ja="閉じる" data-cn="關閉" data-en="Close">閉じる</button>
   </div>
 </div>
 

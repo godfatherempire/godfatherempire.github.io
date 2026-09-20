@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UECHT GROUP — 情報セキュリティ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Sans+SC:wght@200;300;400&family=Noto+Serif+SC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Sans+SC:wght@200;300;400&family=Noto+Serif+SC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/main.css">
 <style>
 .page-hero { min-height:40vh; display:flex; flex-direction:column; justify-content:center; padding:5rem 5vw 4rem; position:relative; overflow:hidden; background:linear-gradient(160deg,#071820 0%,#0d2530 60%,#0a1e2a 100%); }
@@ -42,7 +42,7 @@
   <nav>
     <a href="../../main.html" class="nav-link" data-ja="トップ" data-cn="首頁" data-en="Home">トップ</a>
     <a href="../../main.html#services" class="nav-link" data-ja="事業領域" data-cn="業務領域" data-en="Services">事業領域</a>
-    <a href="news.html" class="nav-link" data-ja="ニュース" data-cn="洞察與紀實" data-en="Insights & Chronicles">ニュース</a>
+    <a href="../news.html" class="nav-link" data-ja="ニュース" data-cn="洞察與紀實" data-en="Insights & Chronicles">ニュース</a>
     <a href="../charity.html" class="nav-link" data-ja="慈善・援助" data-cn="人道主義倡議" data-en="Charity">慈善・援助</a>
     <a href="../../main.html#contact" class="nav-link" data-ja="お問い合わせ" data-cn="聯絡我們" data-en="Contact">お問い合わせ</a>
     <div class="lang-switch">
@@ -84,7 +84,7 @@
         <p style="color:var(--muted);font-size:0.85rem;line-height:1.8;" data-ja="情報セキュリティマネジメントシステムを定期的に見直し、継続的な改善を行います。" data-cn="定期審視資訊安全管理系統，進行持續改善。" data-en="We regularly review our information security management system and make continuous improvements.">情報セキュリティマネジメントシステムを定期的に見直し、継続的な改善を行います。</p>
       </div>
     </div>
-    <p style="color:var(--muted);font-size:0.8rem;font-family:var(--font-mono);">© 2025 UECHT GROUP. 制定日：2025年1月1日</p>
+    <p style="color:var(--muted);font-size:0.8rem;font-family:var(--font-mono);" data-ja="© 2025 UECHT GROUP. 制定日：2025年1月1日" data-cn="© 2025 UECHT GROUP. 制定日期：2025年1月1日" data-en="© 2025 UECHT GROUP. Effective Date: January 1, 2025">© 2025 UECHT GROUP. 制定日：2025年1月1日</p>
   </div>
 </section>
 <footer>
@@ -154,10 +154,10 @@
 <div id="donation-success-overlay" style="display:none; position:fixed; inset:0; background:rgba(7,24,32,0.95); z-index:999; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding:2rem;">
   <div style="max-width:480px;">
     <div style="font-size:4rem; margin-bottom:1.5rem;">🙏</div>
-    <h2 style="font-family:var(--font-en); font-size:2rem; color:var(--white); margin-bottom:1rem;">ご寄付ありがとうございます</h2>
-    <p style="color:var(--silver); margin-bottom:0.5rem;">寄付金額: <strong class="success-amount" style="color:var(--accent2); font-family:var(--font-mono);"></strong></p>
-    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:2rem;">領収書をご登録のメールアドレスにお送りします。</p>
-    <button onclick="closeDonationSuccess()" style="padding:0.8rem 2.5rem; background:var(--accent); color:white; border:none; cursor:pointer; font-family:var(--font-mono); letter-spacing:0.1em;">閉じる</button>
+    <h2 style="font-family:var(--font-en); font-size:2rem; color:var(--white); margin-bottom:1rem;" data-ja="ご寄付ありがとうございます" data-cn="感謝您的捐贈" data-en="Thank You for Your Donation">ご寄付ありがとうございます</h2>
+    <p style="color:var(--silver); margin-bottom:0.5rem;"><span data-ja="寄付金額:" data-cn="捐贈金額:" data-en="Donation Amount:">寄付金額:</span> <strong class="success-amount" style="color:var(--accent2); font-family:var(--font-mono);"></strong></p>
+    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:2rem;" data-ja="領収書をご登録のメールアドレスにお送りします。" data-cn="收據將發送至您登記的電子郵件地址。" data-en="A receipt will be sent to your registered email address.">領収書をご登録のメールアドレスにお送りします。</p>
+    <button onclick="closeDonationSuccess()" style="padding:0.8rem 2.5rem; background:var(--accent); color:white; border:none; cursor:pointer; font-family:var(--font-mono); letter-spacing:0.1em;" data-ja="閉じる" data-cn="關閉" data-en="Close">閉じる</button>
   </div>
 </div>
 
