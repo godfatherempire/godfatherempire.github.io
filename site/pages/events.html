@@ -338,26 +338,3 @@
 <script src="../js/sun-logo.js"></script>
 </body>
 </html>
-<script>
-(function(){
-  var heroTitles = {
-    ja: '💼 採用情報',
-    cn: '💼 招聘資訊',
-    en: '💼 Careers'
-  };
-  document.addEventListener('DOMContentLoaded', function() {
-    var saved = localStorage.getItem('uecht_lang') || 'ja';
-    var el = document.getElementById('page-hero-title');
-    if (el && saved !== 'ja') el.innerHTML = heroTitles[saved] || heroTitles.ja;
-    var _orig = window.setLang;
-    window.setLang = function(lang) {
-      _orig(lang);
-      var el2 = document.getElementById('page-hero-title');
-      if (el2) el2.innerHTML = heroTitles[lang] || heroTitles.ja;
-    };
-  });
-})();
-</script>
-<script src="../js/sun-logo.js"></script>
-</body>
-</html>
